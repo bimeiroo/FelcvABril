@@ -1,22 +1,24 @@
+import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:logging/logging.dart';
 import 'dart:io';
 import '../models/denuncia.dart';
 import '../models/usuario.dart';
 import '../services/denuncia_service.dart';
-import '../services/auth_service.dart';
 import '../screens/seleccionar_ubicacion_screen.dart';
 
 class RegistrarDenunciaScreen extends StatefulWidget {
   final Denuncia? denuncia;
   final bool modoEdicion;
+  final BuildContext context;
 
   const RegistrarDenunciaScreen({
     super.key,
     this.denuncia,
     this.modoEdicion = false,
+    required this.context,
   });
 
   @override
@@ -72,8 +74,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   bool _isLoading = false;
   final ImagePicker _picker = ImagePicker();
   List<String> _fotos = [];
-  List<Usuario> _funcionarios = [];
-  Usuario? _usuarioActual;
+  Usuario? usuarioActual;
   Usuario? funcionarioAsignado;
   Usuario? funcionarioAdicional;
 
@@ -148,38 +149,19 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   }
 
   Future<void> _cargarDatos() async {
+    final session = widget.context.read<SessionCubit>();
     try {
       setState(() {
         _isLoading = true;
       });
-
-      final prefs = await SharedPreferences.getInstance();
-      final authService = AuthService(prefs);
-
-      // Cargar funcionarios primero
-      final funcionarios = await authService.getFuncionarios();
-      if (funcionarios.isEmpty) {
-        throw Exception('No se encontraron funcionarios registrados');
-      }
-
-      // Obtener usuario actual
-      final usuarioActual = await authService.getCurrentUser();
-      if (usuarioActual == null) {
-        throw Exception('No se pudo obtener el usuario actual');
-      }
-
-      if (!mounted) return;
-
+      final authUsuario = session.state.usuarioActual!;
       setState(() {
-        _funcionarios = funcionarios;
-        _usuarioActual = usuarioActual;
-        _funcionarioAsignado = usuarioActual.id;
+        usuarioActual = usuarioActual;
+        _funcionarioAsignado = authUsuario.id;
         _isLoading = false;
       });
     } catch (e) {
       _logger.severe('Error al cargar datos: $e');
-      if (!mounted) return;
-
       setState(() {
         _isLoading = false;
       });
@@ -220,31 +202,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _tipoDenunciaSeleccionado = denuncia.tipoDenuncia;
     _estadoSeleccionado = denuncia.estado;
     _fotos = denuncia.imagenes;
-
-    // Buscar el funcionario asignado en la lista de funcionarios
-    if (_funcionarios.isNotEmpty && denuncia.funcionarioAsignado.isNotEmpty) {
-      _logger.info(
-          'Buscando funcionario asignado: ${denuncia.funcionarioAsignado}');
-
-      // Dividir el nombre completo en sus componentes
-      final nombreCompleto = denuncia.funcionarioAsignado.split(' ');
-      if (nombreCompleto.length >= 3) {
-        final grado = nombreCompleto[0];
-
-        // Buscar el funcionario que coincida con el grado y parte del nombre/apellido
-        _funcionarioAsignado = _funcionarios.firstWhere(
-          (f) =>
-              f.grado == grado &&
-              denuncia.funcionarioAsignado.contains(f.nombre) &&
-              denuncia.funcionarioAsignado.contains(f.apellido),
-          orElse: () {
-            _logger.warning(
-                'No se encontró el funcionario asignado exacto, usando el actual');
-            return _usuarioActual ?? _funcionarios.first;
-          },
-        ).id;
-      }
-    }
 
     _logger.info('Funcionario asignado cargado: $_funcionarioAsignado');
   }
@@ -300,10 +257,9 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
       setState(() => _isLoading = true);
 
       try {
+        final session = widget.context.read<SessionCubit>();
         final denunciaService = DenunciaService();
-        final prefs = await SharedPreferences.getInstance();
-        final authService = AuthService(prefs);
-        final usuario = await authService.getCurrentUser();
+        final usuario = session.state.usuarioActual;
 
         if (usuario == null) {
           throw Exception('No hay usuario autenticado');
@@ -341,13 +297,9 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           funcionarioAsignado: usuario.id,
           funcionarioAdicional: _funcionarioAdicional ?? '',
           nombreFuncionarioAsignado:
-              '${usuario.grado} ${usuario.nombre} ${usuario.apellido}',
+              session.state.usuarioActual!.nombreCompleto(),
           nombreFuncionarioAdicional:
-              _funcionarioAdicional != null && _funcionarioAdicional!.isNotEmpty
-                  ? _funcionarios
-                      .firstWhere((f) => f.id == _funcionarioAdicional)
-                      .nombreCompleto
-                  : '',
+              session.state.usuarioActual!.nombreCompleto(),
           tipoDenuncia: _tipoDenunciaSeleccionado,
           estado: 'Pendiente',
           fechaRegistro: DateTime.now(),
@@ -398,10 +350,16 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final session = context.read<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
         title:
-            Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
+            Column(
+              children: [
+                Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
+                Text(session.state.usuarioActual!.nombreCompleto(), style: const TextStyle(fontSize: 12)),
+              ],
+            ),
         backgroundColor: Colors.green[800],
         foregroundColor: Colors.white,
       ),
@@ -802,7 +760,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                       },
                     ),
                     const SizedBox(height: 16),
-                    _buildFuncionarioAsignadoSection(),
+                    _buildFuncionarioAsignadoSection(session.state.usuarios),
                     const SizedBox(height: 16),
                     TextFormField(
                       controller: _carnetFuncionarioController,
@@ -872,8 +830,8 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     );
   }
 
-  Widget _buildFuncionarioAsignadoSection() {
-    if (_funcionarios.isEmpty) {
+  Widget _buildFuncionarioAsignadoSection(List<Usuario> usuarios) {
+    if (usuarios.isEmpty) {
       return const Center(child: CircularProgressIndicator());
     }
 
@@ -887,10 +845,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             prefixIcon: Icon(Icons.person_pin),
             contentPadding: EdgeInsets.symmetric(horizontal: 12),
           ),
-          items: _funcionarios.map((funcionario) {
+          items: usuarios.map((funcionario) {
             return DropdownMenuItem<String>(
               value: funcionario.id,
-              child: Text(funcionario.nombreCompleto),
+              child: Text(funcionario.nombreCompleto()),
             );
           }).toList(),
           onChanged: (value) {
@@ -913,10 +871,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             prefixIcon: Icon(Icons.person_pin_outlined),
             contentPadding: EdgeInsets.symmetric(horizontal: 12),
           ),
-          items: _funcionarios.map((funcionario) {
+          items: usuarios.map((funcionario) {
             return DropdownMenuItem<String>(
               value: funcionario.id,
-              child: Text(funcionario.nombreCompleto),
+              child: Text(funcionario.nombreCompleto()),
             );
           }).toList(),
           onChanged: (value) {

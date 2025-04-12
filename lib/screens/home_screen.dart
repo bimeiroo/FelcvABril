@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const RegistrarDenunciaScreen(),
+                          builder: (context) => RegistrarDenunciaScreen(context: context,),
                         ),
                       );
                     },

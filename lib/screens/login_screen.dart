@@ -1,9 +1,8 @@
+import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import '../services/auth_service.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'home_screen.dart';
 import 'registro_usuario_screen.dart';
-import 'package:logging/logging.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,8 +15,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final _usuarioController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _logger = Logger('LoginScreen');
-  bool _isLoading = false;
 
   @override
   void dispose() {
@@ -26,59 +23,11 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  Future<void> _login() async {
-    if (!_formKey.currentState!.validate()) {
-      return;
-    }
-
-    setState(() {
-      _isLoading = true;
-    });
-
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final authService = AuthService(prefs);
-
-      final usuario = await authService.login(
-        _usuarioController.text.trim(),
-        _passwordController.text.trim(),
-      );
-
-      if (!mounted) return;
-
-      if (usuario != null) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HomeScreen()),
-        );
-      } else {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HomeScreen()),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Usuario o contraseña incorrectos'),
-            backgroundColor: Colors.red,
-          ),
-        );
-      }
-    } catch (e) {
-      _logger.severe('Error en login: $e');
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Error al iniciar sesión: ${e.toString()}'),
-          backgroundColor: Colors.red,
-        ),
-      );
-    } finally {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
-    }
+  @override
+  void initState() {
+    super.initState();
+    _usuarioController.text = 'juan_montecinos@fubode.org';
+    _passwordController.text = '123456';
   }
 
   void _irARegistro() {
@@ -90,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final session = context.watch<SessionCubit>();
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
@@ -149,19 +99,52 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 48,
                   child: ElevatedButton(
-                    onPressed: _isLoading ? null : _login,
+                    onPressed: session.state.isLoading
+                        ? null
+                        : () {
+                            if (!_formKey.currentState!.validate()) {
+                              return;
+                            }
+                            setState(() {
+                              session
+                                  .handleLogin(
+                                _usuarioController.text.trim(),
+                                _passwordController.text.trim(),
+                              )
+                                  .then(
+                                (usuario) {
+                                  if (usuario != null) {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const HomeScreen()),
+                                    );
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                        content: Text(
+                                            'Usuario o contraseña incorrectos'),
+                                        backgroundColor: Colors.red,
+                                      ),
+                                    );
+                                  }
+                                },
+                              );
+                            });
+                          },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green[800],
                       foregroundColor: Colors.white,
                     ),
-                    child: _isLoading
+                    child: session.state.isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
                         : const Text('Iniciar Sesión'),
                   ),
                 ),
                 const SizedBox(height: 16),
                 TextButton(
-                  onPressed: _isLoading ? null : _irARegistro,
+                  onPressed: session.state.isLoading ? null : _irARegistro,
                   child: const Text('¿No tienes cuenta? Regístrate'),
                 ),
               ],
