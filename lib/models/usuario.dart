@@ -35,20 +35,6 @@ class Usuario {
     };
   }
 
-  factory Usuario.fromJson(Map<String, dynamic> json) {
-    return Usuario(
-      id: json['id'] as String,
-      nombre: json['nombre'] as String,
-      apellido: json['apellido'] as String,
-      grado: json['grado'] as String,
-      usuario: json['usuario'] as String,
-      password: json['password'] as String,
-      carnet: json['carnet'] as String,
-      telefono: json['telefono'] as String,
-      rol: json['rol'] as String? ?? 'funcionario',
-    );
-  }
-
   Usuario copyWith({
     String? id,
     String? nombre,
@@ -73,5 +59,19 @@ class Usuario {
     );
   }
 
-  String get nombreCompleto => '$grado $nombre $apellido';
+  String nombreCompleto(){return '$grado $nombre $apellido';}
+}
+
+Usuario fromJsonUsuario(Map<String, dynamic> json) {
+  return Usuario(
+    id: json['id'].toString(),
+    nombre: json['nombre'] as String,
+    apellido: json['apellido'] as String,
+    grado: json['grado'] as String,
+    usuario: json['usuario'] as String,
+    password: '',
+    carnet: json['carnet'] as String,
+    telefono: json['telefono'] as String,
+    rol: json['rol'] as String? ?? 'funcionario',
+  );
 }

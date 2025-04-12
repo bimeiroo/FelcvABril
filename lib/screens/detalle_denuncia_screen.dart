@@ -728,6 +728,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
                   builder: (context) => RegistrarDenunciaScreen(
                     denuncia: _denuncia,
                     modoEdicion: true,
+                    context: context
                   ),
                 ),
               ).then((value) {
