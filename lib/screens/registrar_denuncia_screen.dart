@@ -354,7 +354,12 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     return Scaffold(
       appBar: AppBar(
         title:
-            Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
+            Column(
+              children: [
+                Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
+                Text(session.state.usuarioActual!.nombreCompleto(), style: const TextStyle(fontSize: 12)),
+              ],
+            ),
         backgroundColor: Colors.green[800],
         foregroundColor: Colors.white,
       ),
