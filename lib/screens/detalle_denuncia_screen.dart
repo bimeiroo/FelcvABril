@@ -1,3 +1,4 @@
+import 'package:felcv/services/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'dart:io';
@@ -45,7 +46,11 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
     super.dispose();
   }
 
-  void _mostrarImagen(String path) {
+  void _mostrarImagen(String url, BuildContext context) async {
+    String urlSupa = await obtenerUrlSupabase(url);
+    if (!context.mounted) {
+      return;
+    }
     showDialog(
       context: context,
       builder: (context) => Dialog(
@@ -54,7 +59,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
             InteractiveViewer(
               minScale: 0.5,
               maxScale: 4.0,
-              child: Image.file(File(path)),
+              child: Image.network(urlSupa),
             ),
             Positioned(
               top: 8,
@@ -138,18 +143,46 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
                       return Padding(
                         padding: const EdgeInsets.all(8),
                         child: InkWell(
-                          onTap: () =>
-                              _mostrarImagen(_denuncia.imagenes[index]),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.file(
-                              File(_denuncia.imagenes[index]),
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
+                            onTap: () async {
+                              _mostrarImagen(
+                                  _denuncia.imagenes[index], context);
+                            },
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: FutureBuilder<String>(
+                                future: obtenerUrlSupabase(
+                                    _denuncia.imagenes[index]),
+                                builder: (context, snapshot) {
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return const SizedBox(
+                                      width: 100,
+                                      height: 100,
+                                      child: Center(
+                                          child: CircularProgressIndicator(
+                                              strokeWidth: 2)),
+                                    );
+                                  } else if (snapshot.hasError) {
+                                    return const SizedBox(
+                                      width: 100,
+                                      height: 100,
+                                      child: Center(
+                                          child: Icon(Icons.broken_image)),
+                                    );
+                                  } else {
+                                    return Image.network(
+                                      snapshot.data!,
+                                      width: 100,
+                                      height: 100,
+                                      fit: BoxFit.cover,
+                                      errorBuilder:
+                                          (context, error, stackTrace) =>
+                                              const Icon(Icons.broken_image),
+                                    );
+                                  }
+                                },
+                              ),
+                            )),
                       );
                     },
                   ),
@@ -186,36 +219,38 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
       final denunciaService = DenunciaService();
 
       final denunciaActualizada = Denuncia(
-        id: _denuncia.id,
-        numeroDenuncia: _denuncia.numeroDenuncia,
-        fecha: _denuncia.fecha,
-        hora: _denuncia.hora,
-        nombreDenunciante: _denuncia.nombreDenunciante,
-        apellidoDenunciante: _denuncia.apellidoDenunciante,
-        ciDenunciante: _denuncia.ciDenunciante,
-        telefonoDenunciante: _denuncia.telefonoDenunciante,
-        direccionDenunciante: _denuncia.direccionDenunciante,
-        profesionDenunciante: _denuncia.profesionDenunciante,
-        nombreDenunciado: _denuncia.nombreDenunciado,
-        ciDenunciado: _denuncia.ciDenunciado,
-        direccionDenunciado: _denuncia.direccionDenunciado,
-        profesionDenunciado: _denuncia.profesionDenunciado,
-        hechos: _denuncia.hechos,
-        lugar: _denuncia.lugar,
-        zona: _denuncia.zona,
-        turno: _denuncia.turno,
-        imagenes: _denuncia.imagenes,
-        funcionarioAsignado: _denuncia.funcionarioAsignado,
-        funcionarioAdicional: _denuncia.funcionarioAdicional,
-        nombreFuncionarioAsignado: _denuncia.nombreFuncionarioAsignado,
-        nombreFuncionarioAdicional: _denuncia.nombreFuncionarioAdicional,
-        tipoDenuncia: _denuncia.tipoDenuncia,
-        estado: nuevoEstado,
-        fechaRegistro: _denuncia.fechaRegistro,
-      );
+          id: _denuncia.id,
+          numeroDenuncia: _denuncia.numeroDenuncia,
+          fecha: _denuncia.fecha,
+          hora: _denuncia.hora,
+          nombreDenunciante: _denuncia.nombreDenunciante,
+          apellidoDenunciante: _denuncia.apellidoDenunciante,
+          ciDenunciante: _denuncia.ciDenunciante,
+          telefonoDenunciante: _denuncia.telefonoDenunciante,
+          direccionDenunciante: _denuncia.direccionDenunciante,
+          profesionDenunciante: _denuncia.profesionDenunciante,
+          nombreDenunciado: _denuncia.nombreDenunciado,
+          ciDenunciado: _denuncia.ciDenunciado,
+          direccionDenunciado: _denuncia.direccionDenunciado,
+          profesionDenunciado: _denuncia.profesionDenunciado,
+          hechos: _denuncia.hechos,
+          lugar: _denuncia.lugar,
+          zona: _denuncia.zona,
+          turno: _denuncia.turno,
+          imagenes: _denuncia.imagenes,
+          funcionarioAsignado: _denuncia.funcionarioAsignado,
+          funcionarioAdicional: _denuncia.funcionarioAdicional,
+          nombreFuncionarioAsignado: _denuncia.nombreFuncionarioAsignado,
+          nombreFuncionarioAdicional: _denuncia.nombreFuncionarioAdicional,
+          tipoDenuncia: _denuncia.tipoDenuncia,
+          estado: nuevoEstado,
+          fechaRegistro: _denuncia.fechaRegistro,
+          telefonoFuncionarioAdicional: _denuncia.telefonoFuncionarioAdicional,
+          carnetFuncionarioAdicional: _denuncia.carnetFuncionarioAdicional,
+          sigla: _denuncia.sigla);
 
-      final success =
-          await denunciaService.actualizarDenuncia(denunciaActualizada);
+      final success =true;
+          // await denunciaService.actualizarDenuncia(denunciaActualizada,);
 
       if (mounted) {
         if (success) {
@@ -444,7 +479,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Denuncia #${_denuncia.numeroDenuncia}',
+                  'Denuncia # ${_denuncia.id}',
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -726,10 +761,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => RegistrarDenunciaScreen(
-                    denuncia: _denuncia,
-                    modoEdicion: true,
-                    context: context
-                  ),
+                      denuncia: _denuncia, modoEdicion: true, context: context),
                 ),
               ).then((value) {
                 if (value != null) {

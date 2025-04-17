@@ -14,11 +14,13 @@ class SessionState extends Equatable {
   final String telefono;
   final String rol;
   final Usuario? usuarioActual;
+  final List<Denuncia> denuncias;
 
   const SessionState({
     this.isLoading = false,
     this.errorMessage = '',
     this.usuarios = const [],
+    this.denuncias = const [],
     this.id = '',
     this.nombre = '',
     this.apellido = '',
@@ -35,6 +37,7 @@ class SessionState extends Equatable {
     bool? isLoading,
     String? errorMessage,
     List<Usuario>? usuarios,
+    List<Denuncia>? denuncias,
     String? id,
     String? nombre,
     String? apellido,
@@ -50,6 +53,7 @@ class SessionState extends Equatable {
       isLoading: isLoading ?? this.isLoading,
       errorMessage: errorMessage ?? this.errorMessage,
       usuarios: usuarios ?? this.usuarios,
+      denuncias: denuncias ?? this.denuncias,
       id: id ?? this.id,
       nombre: nombre ?? this.nombre,
       apellido: apellido ?? this.apellido,
@@ -68,6 +72,7 @@ class SessionState extends Equatable {
         isLoading,
         errorMessage,
         usuarios,
+        denuncias,
         id,
         nombre,
         apellido,

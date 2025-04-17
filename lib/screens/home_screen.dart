@@ -1,4 +1,6 @@
+import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'registrar_denuncia_screen.dart';
 import 'buscar_denuncias_screen.dart';
 
@@ -7,6 +9,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final session = context.read<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('FELCV'),
@@ -50,7 +53,9 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => RegistrarDenunciaScreen(context: context,),
+                          builder: (context) => RegistrarDenunciaScreen(
+                            context: context,
+                          ),
                         ),
                       );
                     },
@@ -72,11 +77,16 @@ class HomeScreen extends StatelessWidget {
                   height: 56,
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BuscarDenunciasScreen(),
-                        ),
+                      session.obtenerDenuncias().then(
+                        (value) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const BuscarDenunciasScreen(),
+                            ),
+                          );
+                        },
                       );
                     },
                     style: ElevatedButton.styleFrom(

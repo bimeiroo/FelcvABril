@@ -1,4 +1,7 @@
 import 'dart:convert';
+import 'package:felcv/models/usuario.dart';
+import 'package:felcv/services/helpers.dart';
+import 'package:felcv/services/supabase_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:logging/logging.dart';
 import '../models/denuncia.dart';
@@ -31,64 +34,114 @@ class DenunciaService {
     return _obtenerDenuncias();
   }
 
-  Future<bool> guardarDenuncia(Denuncia denuncia) async {
+  Future<bool> guardarDenuncia(Denuncia denuncia, Usuario usuario) async {
     try {
-      await _initPrefs();
+      _logger.info('Iniciando guardado de denuncia');
+      List<String> photoName = [];
+      for (var i = 0; i < denuncia.imagenes.length; i++) {
+        final path = denuncia.imagenes[i];
+        final name = namePath();
+        photoName.add(name);
+        await uploadImage(path, name);
+        _logger.info('Guardado de imagen : $path a $name');
+      }
+      final params = {
+        'p_id_usuario': int.parse(usuario.id),
+        'p_numero_denuncia': denuncia.numeroDenuncia,
+        'p_fecha': formatearFecha(denuncia.fecha),
+        'p_hora': denuncia.hora,
+        'p_nombre_denunciante': denuncia.nombreDenunciante,
+        'p_apellido_denunciante': denuncia.apellidoDenunciante,
+        'p_ci_denunciante': denuncia.ciDenunciante,
+        'p_telefono_denunciante': denuncia.telefonoDenunciante,
+        'p_direccion_denunciante': denuncia.direccionDenunciante,
+        'p_profesion_denunciante': denuncia.profesionDenunciante,
+        'p_nombre_denunciado': denuncia.nombreDenunciado,
+        'p_ci_denunciado': denuncia.ciDenunciado,
+        'p_direccion_denunciado': denuncia.direccionDenunciado,
+        'p_profesion_denunciado': denuncia.profesionDenunciado,
+        'p_hechos': denuncia.hechos,
+        'p_lugar': denuncia.lugar,
+        'p_zona': denuncia.zona,
+        'p_turno': denuncia.turno,
+        'p_funcionario_asignado': int.parse(denuncia.funcionarioAsignado),
+        'p_funcionario_adicional': int.parse(denuncia.funcionarioAdicional),
+        'p_nombre_funcionario_asignado': denuncia.nombreFuncionarioAsignado,
+        'p_nombre_funcionario_adicional': denuncia.nombreFuncionarioAdicional,
+        'p_estado': denuncia.estado,
+        'p_tipo_denuncia': denuncia.tipoDenuncia,
+        'p_imagenes': photoName,
+        'p_telefono_funcionario_adicional':
+            denuncia.telefonoFuncionarioAdicional,
+        'p_carnet_funcionario_adicional': denuncia.carnetFuncionarioAdicional,
+        'p_sigla': denuncia.sigla
+      };
+
+      final response = await makeRpc('den_insertar_denuncia', params: params);
+      if (response == null) {
+        _logger.severe('Error al insertar denuncia');
+        return false;
+      }
+
       _logger.info('Guardando denuncia: ${denuncia.numeroDenuncia}');
       _logger.info('Datos del denunciante:');
       _logger.info('Nombre: ${denuncia.nombreDenunciante}');
       _logger.info('Apellido: ${denuncia.apellidoDenunciante}');
       _logger.info('CI: ${denuncia.ciDenunciante}');
 
-      final denuncias = await _obtenerDenuncias();
-      final index = denuncias.indexWhere((d) => d.id == denuncia.id);
-      if (index != -1) {
-        denuncias[index] = denuncia;
-      } else {
-        denuncias.add(denuncia);
-      }
-
-      final resultado = await _guardarDenuncias(denuncias);
-      _logger.info('Denuncia guardada correctamente: $resultado');
-      return resultado;
+      return true;
     } catch (e) {
       _logger.severe('Error al guardar denuncia: $e');
       return false;
     }
   }
 
-  Future<bool> actualizarDenuncia(Denuncia denuncia) async {
+  Future<bool> actualizarDenuncia(Denuncia denuncia, Usuario usuario) async {
     try {
       _logger.info('Iniciando actualización de denuncia');
       _logger.info('ID de la denuncia: ${denuncia.id}');
       _logger.info('Número de denuncia: ${denuncia.numeroDenuncia}');
 
-      _prefs ??= await SharedPreferences.getInstance();
+      final params = {
+        'p_id_denuncia': int.parse(denuncia.id!),
+        'p_id_usuario': int.parse(usuario.id),
+        'p_numero_denuncia': denuncia.numeroDenuncia,
+        'p_fecha': formatearFecha2(denuncia.fecha),
+        'p_hora': denuncia.hora,
+        'p_nombre_denunciante': denuncia.nombreDenunciante,
+        'p_apellido_denunciante': denuncia.apellidoDenunciante,
+        'p_ci_denunciante': denuncia.ciDenunciante,
+        'p_telefono_denunciante': denuncia.telefonoDenunciante,
+        'p_direccion_denunciante': denuncia.direccionDenunciante,
+        'p_profesion_denunciante': denuncia.profesionDenunciante,
+        'p_nombre_denunciado': denuncia.nombreDenunciado,
+        'p_ci_denunciado': denuncia.ciDenunciado,
+        'p_direccion_denunciado': denuncia.direccionDenunciado,
+        'p_profesion_denunciado': denuncia.profesionDenunciado,
+        'p_hechos': denuncia.hechos,
+        'p_lugar': denuncia.lugar,
+        'p_zona': denuncia.zona,
+        'p_turno': denuncia.turno,
+        'p_funcionario_asignado': int.parse(denuncia.funcionarioAsignado),
+        'p_funcionario_adicional': int.parse(denuncia.funcionarioAdicional),
+        'p_nombre_funcionario_asignado': denuncia.nombreFuncionarioAsignado,
+        'p_nombre_funcionario_adicional': denuncia.nombreFuncionarioAdicional,
+        'p_estado': denuncia.estado,
+        'p_tipo_denuncia': denuncia.tipoDenuncia,
+        'p_telefono_funcionario_adicional':
+            denuncia.telefonoFuncionarioAdicional,
+        'p_carnet_funcionario_adicional': denuncia.carnetFuncionarioAdicional,
+        'p_sigla': denuncia.sigla
+      };
 
-      if (_prefs == null) {
-        _logger.severe('No se pudo inicializar SharedPreferences');
+      final response = await makeRpc('den_actualizar_denuncia', params: params);
+      if (response == null) {
+        _logger.severe('Error al insertar denuncia');
         return false;
       }
 
-      final denuncias = await _obtenerDenuncias();
-      _logger
-          .info('Total de denuncias antes de actualizar: ${denuncias.length}');
-
-      final index = denuncias.indexWhere((d) => d.id == denuncia.id);
-      if (index == -1) {
-        _logger.warning('No se encontró la denuncia con ID: ${denuncia.id}');
-        return false;
-      }
-
-      _logger.info('Denuncia encontrada en el índice: $index');
-      denuncias[index] = denuncia;
-
-      final denunciasJson = denuncias.map((d) => d.toJson()).toList();
-      final resultado =
-          await _prefs!.setString('denuncias', jsonEncode(denunciasJson));
-
-      _logger.info('Resultado de guardar denuncias: $resultado');
-      return resultado;
+      _logger.info('Resultado de guardar denuncias');
+      return true;
     } catch (e) {
       _logger.severe('Error al actualizar denuncia: $e');
       return false;
@@ -180,6 +233,19 @@ class DenunciaService {
     } catch (e) {
       _logger.severe('Error al buscar denuncias: $e');
       return [];
+    }
+  }
+
+  Future<Denuncia> encontrarDenuncia(Denuncia denuncia) async {
+    try {
+      
+    final params = {
+      'vid': int.parse(denuncia.id!),
+    };
+    final response = await makeRpc('den_encontrar_denuncia', params: params);
+    return fromJsonDenuncia(response['data']);
+    } catch (e) {
+      return fromJsonDenuncia({});
     }
   }
 }
