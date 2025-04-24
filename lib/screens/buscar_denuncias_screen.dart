@@ -1,4 +1,6 @@
+import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../models/denuncia.dart';
 import '../services/denuncia_service.dart';
 import 'detalle_denuncia_screen.dart';
@@ -12,14 +14,12 @@ class BuscarDenunciasScreen extends StatefulWidget {
 
 class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
   final _searchController = TextEditingController();
-  List<Denuncia> _denuncias = [];
   bool _isLoading = false;
   final DenunciaService _denunciaService = DenunciaService();
 
   @override
   void initState() {
     super.initState();
-    _cargarDenuncias();
   }
 
   @override
@@ -28,38 +28,14 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
     super.dispose();
   }
 
-  Future<void> _cargarDenuncias() async {
-    setState(() => _isLoading = true);
-
-    try {
-      final denuncias = await _denunciaService.getDenuncias();
-      if (mounted) {
-        setState(() {
-          _denuncias = denuncias;
-          _isLoading = false;
-        });
-      }
-    } catch (e) {
-      if (mounted) {
-        setState(() => _isLoading = false);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error al cargar denuncias: ${e.toString()}'),
-            backgroundColor: Colors.red,
-          ),
-        );
-      }
-    }
-  }
-
   Future<void> _buscarDenuncias(String query) async {
     setState(() => _isLoading = true);
-
+  
     try {
       final denuncias = await _denunciaService.buscarDenuncias(query);
       if (mounted) {
         setState(() {
-          _denuncias = denuncias;
+          // _denuncias = denuncias;
           _isLoading = false;
         });
       }
@@ -76,20 +52,22 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
     }
   }
 
-  void _verDetalleDenuncia(Denuncia denuncia) {
+  void _verDetalleDenuncia(Denuncia denuncia) async{
+    final Denuncia searchDenuncia = await _denunciaService.encontrarDenuncia(denuncia);
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => DetalleDenunciaScreen(denuncia: denuncia),
+        builder: (context) => DetalleDenunciaScreen(denuncia: searchDenuncia),
       ),
     ).then((_) {
       // Recargar las denuncias al volver del detalle
-      _cargarDenuncias();
+      // _cargarDenuncias();
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final session = context.watch<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Buscar Denuncias'),
@@ -113,20 +91,22 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
                         icon: const Icon(Icons.clear),
                         onPressed: () {
                           _searchController.clear();
-                          _cargarDenuncias();
+                          // _cargarDenuncias();
                         },
                       )
                     : null,
               ),
-              onChanged: _buscarDenuncias,
+              onChanged:(valule)async{
+                 await session.buscarDenununciados(valule);
+              },
             ),
           ),
           Expanded(
-            child: _isLoading
+            child: session.state.isLoading
                 ? const Center(
                     child: CircularProgressIndicator(),
                   )
-                : _denuncias.isEmpty
+                : session.state.denuncias.isEmpty
                     ? Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -150,9 +130,9 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
                         ),
                       )
                     : ListView.builder(
-                        itemCount: _denuncias.length,
+                        itemCount: session.state.denuncias.length,
                         itemBuilder: (context, index) {
-                          final denuncia = _denuncias[index];
+                          final denuncia = session.state.denuncias[index];
                           return Card(
                             margin: const EdgeInsets.symmetric(
                               horizontal: 16,
@@ -160,7 +140,7 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
                             ),
                             child: ListTile(
                               title: Text(
-                                'Denuncia ${denuncia.numeroDenuncia}',
+                                'Denuncia # ${denuncia.id}',
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -169,7 +149,10 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    '${denuncia.nombreDenunciante} ${denuncia.apellidoDenunciante}',
+                                    'Denunciante: ${denuncia.nombreDenunciante} ${denuncia.apellidoDenunciante}',
+                                  ),
+                                   Text(
+                                    'Denunciado: ${denuncia.nombreDenunciado}',
                                   ),
                                   Text(
                                     'Estado: ${denuncia.estado}',

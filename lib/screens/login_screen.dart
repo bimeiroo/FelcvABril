@@ -112,8 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 _passwordController.text.trim(),
                               )
                                   .then(
-                                (usuario) {
-                                  if (usuario != null) {
+                                (value) {
+                                  if (value['usuario'] != null) {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
@@ -122,9 +122,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                     );
                                   } else {
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                        content: Text(
-                                            'Usuario o contraseña incorrectos'),
+                                      SnackBar(
+                                        content: Text(value['msg']),
                                         backgroundColor: Colors.red,
                                       ),
                                     );

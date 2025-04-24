@@ -1,5 +1,5 @@
 class Denuncia {
-  final String id;
+  final String? id;
   final String numeroDenuncia;
   final String fecha;
   final String hora;
@@ -22,12 +22,15 @@ class Denuncia {
   final String funcionarioAdicional;
   final String nombreFuncionarioAsignado;
   final String nombreFuncionarioAdicional;
+  final String telefonoFuncionarioAdicional;
+  final String carnetFuncionarioAdicional;
+  final String sigla;
   final String estado;
   final String tipoDenuncia;
   final DateTime fechaRegistro;
 
   Denuncia({
-    required this.id,
+    this.id = "0",
     required this.numeroDenuncia,
     required this.fecha,
     required this.hora,
@@ -53,6 +56,9 @@ class Denuncia {
     required this.estado,
     required this.tipoDenuncia,
     required this.fechaRegistro,
+    required this.telefonoFuncionarioAdicional,
+    required this.carnetFuncionarioAdicional,
+    required this.sigla,
   });
 
   Map<String, dynamic> toJson() {
@@ -114,9 +120,12 @@ class Denuncia {
       estado: json['estado'] as String,
       tipoDenuncia: json['tipoDenuncia'] as String,
       fechaRegistro: DateTime.parse(json['fechaRegistro'] as String),
+      telefonoFuncionarioAdicional:
+          json['telefonoFuncionarioAdicional'] as String,
+      carnetFuncionarioAdicional: json['carnetFuncionarioAdicional'] as String,
+      sigla: json['sigla'] as String,
     );
   }
-
   Denuncia copyWith({
     String? id,
     String? numeroDenuncia,
@@ -144,6 +153,9 @@ class Denuncia {
     String? estado,
     String? tipoDenuncia,
     DateTime? fechaRegistro,
+    String? telefonoFuncionarioAdicional,
+    String? carnetFuncionarioAdicional,
+    String? sigla,
   }) {
     return Denuncia(
       id: id ?? this.id,
@@ -174,6 +186,47 @@ class Denuncia {
       estado: estado ?? this.estado,
       tipoDenuncia: tipoDenuncia ?? this.tipoDenuncia,
       fechaRegistro: fechaRegistro ?? this.fechaRegistro,
+      telefonoFuncionarioAdicional:
+          telefonoFuncionarioAdicional ?? this.telefonoFuncionarioAdicional,
+      carnetFuncionarioAdicional:
+          carnetFuncionarioAdicional ?? this.carnetFuncionarioAdicional,
+      sigla: sigla ?? this.sigla,
     );
   }
+}
+
+Denuncia fromJsonDenuncia(Map<String, dynamic> json) {
+  return Denuncia(
+    id: json['id_denuncia'].toString(),
+    numeroDenuncia: json['numero_denuncia'] ?? '',
+    fecha: json['fecha'] as String,
+    hora: json['hora'] as String,
+    nombreDenunciante: json['nombre_denunciante'] as String,
+    apellidoDenunciante: json['apellido_denunciante'] as String,
+    ciDenunciante: json['ci_denunciante'] as String,
+    telefonoDenunciante: json['telefono_denunciante'] as String,
+    direccionDenunciante: json['direccion_denunciante'] as String,
+    profesionDenunciante: json['profesion_denunciante'] as String,
+    nombreDenunciado: json['nombre_denunciado'] as String,
+    ciDenunciado: json['ci_denunciado'] as String,
+    direccionDenunciado: json['direccion_denunciado'] as String,
+    profesionDenunciado: json['profesion_denunciado'] as String,
+    hechos: json['hechos'] as String,
+    lugar: json['lugar'] as String,
+    zona: json['zona'] as String,
+    turno: json['turno'] as String,
+    imagenes: (json['imagenes'] as List<dynamic>)
+        .map((imagen) => imagen['url_imagen'] as String)
+        .toList(),
+    funcionarioAsignado: json['id_funcionario_asignado'].toString(),
+    funcionarioAdicional: json['id_funcionario_adicional'].toString(),
+    nombreFuncionarioAsignado: json['nombre_funcionario_asignado'] as String,
+    nombreFuncionarioAdicional: json['nombre_funcionario_adicional'] as String,
+    estado: json['estado'] as String,
+    tipoDenuncia: json['tipo_denuncia'] as String,
+    fechaRegistro: DateTime.parse(json['fecha_registro'] as String),
+    telefonoFuncionarioAdicional: json['telefono_funcionario_adicional'],
+    carnetFuncionarioAdicional: json['carnet_funcionario_adicional'],
+    sigla: json['sigla'],
+  );
 }

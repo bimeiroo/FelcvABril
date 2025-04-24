@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2025/04/12-11:38:42.464 286c Reusing MANIFEST C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.c4a450fd\flutter_tools_chrome_device.c14e85d7\Default\Service Worker\Database/MANIFEST-000001
 2025/04/12-11:38:42.465 286c Recovering log #3
 2025/04/12-11:38:42.466 286c Reusing old log C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.c4a450fd\flutter_tools_chrome_device.c14e85d7\Default\Service Worker\Database/000003.log 
+=======
+2025/04/23-20:37:48.859 2774 Reusing MANIFEST C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.ab3a39d9\flutter_tools_chrome_device.1ecbcdeb\Default\Service Worker\Database/MANIFEST-000001
+2025/04/23-20:37:48.860 2774 Recovering log #3
+2025/04/23-20:37:48.861 2774 Reusing old log C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.ab3a39d9\flutter_tools_chrome_device.1ecbcdeb\Default\Service Worker\Database/000003.log 
+>>>>>>> registerUser
