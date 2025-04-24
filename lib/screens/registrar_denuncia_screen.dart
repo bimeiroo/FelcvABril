@@ -67,7 +67,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
       TextEditingController();
   final TextEditingController _telefonoFuncionarioController =
       TextEditingController();
-  
 
   String _tipoDenunciaSeleccionado = 'Violencia Física';
   String _estadoSeleccionado = 'Pendiente';
@@ -207,7 +206,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _tipoDenunciaSeleccionado = denuncia.tipoDenuncia;
     _estadoSeleccionado = denuncia.estado;
     _fotos = denuncia.imagenes;
-    _idDenuncia =denuncia.id;
+    _idDenuncia = denuncia.id;
     _funcionarioAdicional = denuncia.funcionarioAdicional;
     _carnetFuncionarioController.text = denuncia.carnetFuncionarioAdicional;
     _telefonoFuncionarioController.text = denuncia.telefonoFuncionarioAdicional;
@@ -308,8 +307,9 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           funcionarioAdicional: _funcionarioAdicional ?? '',
           nombreFuncionarioAsignado:
               session.state.usuarioActual!.nombreCompleto(),
-          nombreFuncionarioAdicional:
-              session.state.usuarios[(int.tryParse(_funcionarioAdicional!) ?? 0) - 1].nombreCompleto(),
+          nombreFuncionarioAdicional: session
+              .state.usuarios[(int.tryParse(_funcionarioAdicional!) ?? 0) - 1]
+              .nombreCompleto(),
           tipoDenuncia: _tipoDenunciaSeleccionado,
           estado: 'Pendiente',
           fechaRegistro: DateTime.now(),
@@ -319,8 +319,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
         );
 
         final success = widget.modoEdicion
-            ? await denunciaService.actualizarDenuncia(denuncia,session.state.usuarioActual!)
-            : await denunciaService.guardarDenuncia(denuncia,session.state.usuarioActual!);
+            ? await denunciaService.actualizarDenuncia(
+                denuncia, session.state.usuarioActual!)
+            : await denunciaService.guardarDenuncia(
+                denuncia, session.state.usuarioActual!);
 
         if (mounted) {
           if (success) {
@@ -367,12 +369,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     return Scaffold(
       appBar: AppBar(
         title:
-            Column(
-              children: [
-                Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
-                Text(_idDenuncia.toString())
-              ],
-            ),
+            Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
         backgroundColor: Colors.green[800],
         foregroundColor: Colors.white,
       ),
@@ -821,8 +818,9 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              !widget.modoEdicion?
-              _buildMediaSection():_buildMediaSectionEdit(),
+              !widget.modoEdicion
+                  ? _buildMediaSection()
+                  : _buildMediaSectionEdit(),
               const SizedBox(height: 24),
               SizedBox(
                 height: 48,
@@ -959,7 +957,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     );
   }
 
-   Widget _buildMediaSectionEdit() {
+  Widget _buildMediaSectionEdit() {
     return Card(
       elevation: 2,
       child: Padding(
@@ -983,7 +981,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                   ),
                 ),
                 const Spacer(),
-                
               ],
             ),
             const Divider(),
@@ -1002,64 +999,62 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                 ],
               ),
               const SizedBox(height: 8),
-                Container(
-                  height: 120,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey[300]!),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: _fotos.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: InkWell(
-                            onTap: () async {
-                              // _mostrarImagen(
-                              //     _denuncia.imagenes[index], context);
-                            },
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                              child: FutureBuilder<String>(
-                                future: obtenerUrlSupabase(
-                                    _fotos[index]),
-                                builder: (context, snapshot) {
-                                  if (snapshot.connectionState ==
-                                      ConnectionState.waiting) {
-                                    return const SizedBox(
-                                      width: 100,
-                                      height: 100,
-                                      child: Center(
-                                          child: CircularProgressIndicator(
-                                              strokeWidth: 2)),
-                                    );
-                                  } else if (snapshot.hasError) {
-                                    return const SizedBox(
-                                      width: 100,
-                                      height: 100,
-                                      child: Center(
-                                          child: Icon(Icons.broken_image)),
-                                    );
-                                  } else {
-                                    return Image.network(
-                                      snapshot.data!,
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
-                                      errorBuilder:
-                                          (context, error, stackTrace) =>
-                                              const Icon(Icons.broken_image),
-                                    );
-                                  }
-                                },
-                              ),
-                            )),
-                      );
-                    },
-                  ),
-                )
-                
+              Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey[300]!),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _fotos.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: InkWell(
+                          onTap: () async {
+                            // _mostrarImagen(
+                            //     _denuncia.imagenes[index], context);
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: FutureBuilder<String>(
+                              future: obtenerUrlSupabase(_fotos[index]),
+                              builder: (context, snapshot) {
+                                if (snapshot.connectionState ==
+                                    ConnectionState.waiting) {
+                                  return const SizedBox(
+                                    width: 100,
+                                    height: 100,
+                                    child: Center(
+                                        child: CircularProgressIndicator(
+                                            strokeWidth: 2)),
+                                  );
+                                } else if (snapshot.hasError) {
+                                  return const SizedBox(
+                                    width: 100,
+                                    height: 100,
+                                    child:
+                                        Center(child: Icon(Icons.broken_image)),
+                                  );
+                                } else {
+                                  return Image.network(
+                                    snapshot.data!,
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                    errorBuilder:
+                                        (context, error, stackTrace) =>
+                                            const Icon(Icons.broken_image),
+                                  );
+                                }
+                              },
+                            ),
+                          )),
+                    );
+                  },
+                ),
+              )
             ],
           ],
         ),
@@ -1102,37 +1097,37 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     );
   }
 
-Widget _buildFotoItem(String path) {
-  return Padding(
-    padding: const EdgeInsets.only(right: 8),
-    child: Stack(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: kIsWeb 
-            ? Image.network(
-                path,
-                width: 120,
-                height: 120,
-                fit: BoxFit.cover,
-              )
-            : Image.file(
-                File(path),
-                width: 120,
-                height: 120,
-                fit: BoxFit.cover,
-              ),
-        ),
-        Positioned(
-          top: 4,
-          right: 4,
-          child: IconButton(
-            icon: const Icon(Icons.close, color: Colors.white),
-            onPressed: () => _eliminarFoto(_fotos.indexOf(path)),
+  Widget _buildFotoItem(String path) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 8),
+      child: Stack(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: kIsWeb
+                ? Image.network(
+                    path,
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover,
+                  )
+                : Image.file(
+                    File(path),
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover,
+                  ),
           ),
-        ),
-      ],
-    ),
-  );
-}
+          Positioned(
+            top: 4,
+            right: 4,
+            child: IconButton(
+              icon: const Icon(Icons.close, color: Colors.white),
+              onPressed: () => _eliminarFoto(_fotos.indexOf(path)),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }

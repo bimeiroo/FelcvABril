@@ -35,10 +35,26 @@ class HomeScreen extends StatelessWidget {
                   size: 100,
                   color: Colors.white,
                 ),
-                const SizedBox(height: 32),
                 const Text(
                   'Sistema de Denuncias',
                   style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 32),
+                Text(
+                  'Bienvenido'.toUpperCase(),
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  '${session.state.usuarioActual!.grado.trim()} ${session.state.usuarioActual!.nombre.trim()} ${session.state.usuarioActual!.apellido.trim()}',
+                  style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:felcv/services/custom_pdf.dart';
 import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -105,15 +106,61 @@ class PdfService {
       child: pw.Column(
         crossAxisAlignment: pw.CrossAxisAlignment.center,
         children: [
+          pw.Row(children: [
+            pw.Column(
+              children: [
+                pw.Container(
+                  width: 40,
+                  height: 40,
+                  child: pw.Image(logoImage!),
+                ),
+                pw.Text(
+                  'POLICIA BOLIVIANA',
+                  style: pw.TextStyle(
+                    fontSize: 7,
+                    fontWeight: pw.FontWeight.bold,
+                    font: pw.Font.courier(),
+                  ),
+                  textAlign: pw.TextAlign.center,
+                ),
+                pw.Text(
+                  'DIRECCION DEPARTAMENTAL DE LA FUERZA ESPECIAL',
+                  style: pw.TextStyle(
+                    fontSize: 7,
+                    fontWeight: pw.FontWeight.bold,
+                    font: pw.Font.courier(),
+                  ),
+                  textAlign: pw.TextAlign.center,
+                ),
+                pw.Text(
+                  'DE LUCHA CONTRA LA VIOLENCIA',
+                  style: pw.TextStyle(
+                    fontSize: 7,
+                    fontWeight: pw.FontWeight.bold,
+                    font: pw.Font.courier(),
+                  ),
+                  textAlign: pw.TextAlign.center,
+                ),
+                pw.Text(
+                  '“GENOVEVA RIOS”',
+                  style: pw.TextStyle(
+                    fontSize: 7,
+                    fontWeight: pw.FontWeight.bold,
+                    font: pw.Font.courier(),
+                  ),
+                  textAlign: pw.TextAlign.center,
+                ),
+              ],
+            )
+          ]),
           pw.Row(
             crossAxisAlignment: pw.CrossAxisAlignment.start,
             children: [
-              if (logoImage != null)
-                pw.Container(
-                  width: 60,
-                  height: 60,
-                  child: pw.Image(logoImage),
-                ),
+              pw.Container(
+                width: 60,
+                height: 60,
+                child: pw.Image(logoImage),
+              ),
               pw.SizedBox(width: 10),
               pw.Expanded(
                 child: pw.Column(
@@ -926,239 +973,91 @@ class PdfService {
           margin: const pw.EdgeInsets.all(32),
           build: (pw.Context context) {
             return [
-              // Encabezado con logo y texto
               pw.Row(
-                children: [
-                  // Logo
-                  pw.Container(
-                    width: 100,
-                    height: 100,
-                    child: pw.Image(logoImage),
-                  ),
-                  pw.SizedBox(width: 20),
-                  // Texto institucional
-                  pw.Expanded(
-                    child: pw.Column(
-                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                  children: [
+                    pw.Column(
                       children: [
-                        pw.Text(
-                          'POLICIA BOLIVIANA',
-                          style: pw.TextStyle(
-                            fontSize: 14,
-                            fontWeight: pw.FontWeight.bold,
+                        pw.Container(
+                          width: 40,
+                          height: 40,
+                          child: pw.Image(logoImage),
+                        ),
+                        textoEncabezado('POLICIA BOLIVIANA'),
+                        pw.Container(
+                          alignment: pw.Alignment.center,
+                          child: pw.Column(
+                            children: [
+                              textoEncabezado(
+                                  'DIRECCION DEPARTAMENTAL DE LA FUERZA ESPECIAL'),
+                              textoEncabezado('DE LUCHA CONTRA LA VIOLENCIA'),
+                            ],
                           ),
                         ),
-                        pw.SizedBox(height: 5),
-                        pw.Text(
-                          'DIRECCION DEPARTAMENTAL DE LA FUERZA ESPECIAL DE LUCHA CONTRA LA VIOLENCIA "GENOVEVA RIOS"',
-                          style: pw.TextStyle(
-                            fontSize: 12,
-                            fontWeight: pw.FontWeight.bold,
-                          ),
-                        ),
-                        pw.SizedBox(height: 5),
-                        pw.Text(
-                          'COCHABAMBA - BOLIVIA',
-                          style: pw.TextStyle(
-                            fontSize: 12,
-                            fontWeight: pw.FontWeight.bold,
-                          ),
-                        ),
+                        textoEncabezado('"GENOVEVA RIOS"'),
+                        pw.SizedBox(width: 20),
+                        textoSubrayado('Minero-Santa Cruz - Bolivia'),
                       ],
                     ),
-                  ),
-                ],
-              ),
-              pw.SizedBox(height: 20),
-
-              // Bloque 1: POLICIAS QUE INTERVINIERON
-              pw.Container(
-                padding: const pw.EdgeInsets.all(10),
-                decoration: pw.BoxDecoration(
-                  border: pw.Border.all(color: PdfColors.black),
-                ),
+                    pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.center,
+                      children: [
+                        pw.Column(
+                          crossAxisAlignment: pw.CrossAxisAlignment.center,
+                          children: [
+                            textoEncabezado('Caso  68/2024',fontSize: 10),
+                          ],
+                        ),
+                        textoEncabezado('Dir. Dptal. de la FELCV de: MONTERO',fontSize: 10),
+                        textoEncabezado('En Fecha 26/01/2024',fontSize: 10),
+                      ],
+                    )
+                  ]),
+                  pw.SizedBox(height: 20),
+              pw.Center(
                 child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
                   children: [
-                    pw.Text(
-                      '1. POLICIAS QUE INTERVINIERON',
-                      style: pw.TextStyle(
-                        fontSize: 12,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Text(
-                      '1. ${data['nombreFuncionarioAsignado'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Unidad: ${data['unidadPolicial'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Zona: ${data['zona'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.SizedBox(height: 5),
-                    if (data['nombreFuncionarioAdicional']?.isNotEmpty ??
-                        false) ...[
-                      pw.Text(
-                        '2. ${data['nombreFuncionarioAdicional']}',
-                        style: const pw.TextStyle(fontSize: 10),
-                      ),
-                      pw.Text(
-                        'Unidad: ${data['unidadPolicial'] ?? 'No especificada'}',
-                        style: const pw.TextStyle(fontSize: 10),
-                      ),
-                      pw.Text(
-                        'Zona: ${data['zona'] ?? 'No especificada'}',
-                        style: const pw.TextStyle(fontSize: 10),
-                      ),
-                    ],
+                    textoTitulo('INFORME DE INTERVENCION POLICIAL PREVENTIVA'),
+                    textoTitulo('ACCIOON DIRECTA'),
                   ],
                 ),
               ),
-              pw.SizedBox(height: 10),
-
-              // Bloque 2: INFORMACION DEL HECHO
-              pw.Container(
-                padding: const pw.EdgeInsets.all(10),
-                decoration: pw.BoxDecoration(
-                  border: pw.Border.all(color: PdfColors.black),
-                ),
-                child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    pw.Text(
-                      '2. INFORMACION DEL HECHO',
-                      style: pw.TextStyle(
-                        fontSize: 12,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Text(
-                      'Tipo de Denuncia: ${data['tipoDenuncia'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Lugar del Hecho: ${data['lugar'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Fecha: ${data['fecha'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                  ],
-                ),
-              ),
-              pw.SizedBox(height: 10),
-
-              // Bloque 3: DENUNCIANTE O VICTIMA
-              pw.Container(
-                padding: const pw.EdgeInsets.all(10),
-                decoration: pw.BoxDecoration(
-                  border: pw.Border.all(color: PdfColors.black),
-                ),
-                child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    pw.Text(
-                      '3. DENUNCIANTE O VICTIMA',
-                      style: pw.TextStyle(
-                        fontSize: 12,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Text(
-                      'Nombre: ${data['nombreDenunciante'] ?? 'No especificado'} ${data['apellidoDenunciante'] ?? ''}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'CI: ${data['ciDenunciante'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Dirección: ${data['direccionDenunciante'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Profesión: ${data['profesionDenunciante'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Teléfono: ${data['telefonoDenunciante'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                  ],
-                ),
-              ),
-              pw.SizedBox(height: 10),
-
-              // Bloque 5: PERSONA / APREHENDIDO
-              pw.Container(
-                padding: const pw.EdgeInsets.all(10),
-                decoration: pw.BoxDecoration(
-                  border: pw.Border.all(color: PdfColors.black),
-                ),
-                child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    pw.Text(
-                      '5. PERSONA / APREHENDIDO',
-                      style: pw.TextStyle(
-                        fontSize: 12,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Text(
-                      'Nombre: ${data['nombreDenunciado'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'CI: ${data['ciDenunciado'] ?? 'No especificado'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Dirección: ${data['direccionDenunciado'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                    pw.Text(
-                      'Profesión: ${data['profesionDenunciado'] ?? 'No especificada'}',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                  ],
-                ),
-              ),
-              pw.SizedBox(height: 10),
-
-              // Bloque 6: RESEÑA DEL CASO
-              pw.Container(
-                padding: const pw.EdgeInsets.all(10),
-                decoration: pw.BoxDecoration(
-                  border: pw.Border.all(color: PdfColors.black),
-                ),
-                child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
-                  children: [
-                    pw.Text(
-                      '6. RESEÑA DEL CASO',
-                      style: pw.TextStyle(
-                        fontSize: 12,
-                        fontWeight: pw.FontWeight.bold,
-                      ),
-                    ),
-                    pw.SizedBox(height: 10),
-                    pw.Text(
-                      data['hechos'] ?? 'No se registraron hechos',
-                      style: const pw.TextStyle(fontSize: 10),
-                    ),
-                  ],
-                ),
-              ),
+              textoNormal('Arts. 293 y 298 del Código de Procedimiento Penal'),
+              textoRecomendaciones(
+                  'NO HAGA USO DE CLAVES, ESCRIBA CON LETRA CLARA Y LEGIBLE, LEA CUIDADOSAMENTE CADA UNO DE LOS PUNTOS; EN CASO DE DUDA SOBRE EL LLENADO DEL PRESENTE INFORME, CONSULTE CON EL INVESTIGADOR QUE RECEPCIONA EL CASO'),
+              textoNegrilla('1. POLICIAS QUE INTERVINIERON'),
+              textoCuadro([
+                '1. ${data['nombreFuncionarioAsignado']}',
+                'UNIDAD POLICIAL: FELCV - Montero',
+                'Zona: ${data['zona']}',
+                '2. ${data['nombreFuncionarioAdicional']}',
+                'UNIDAD POLICIAL: FELCV - Montero',
+                'Zona: ${data['zona']}',
+              ]),
+              textoNegrilla('2. INFORMACION SOBRE EL HECHO:'),
+              textoCuadro([
+                'Tipo de Denuncia: ${data['tipoDenuncia']}',
+                'LUGAR DEL HECHO : ${data['lugar']} ',
+                'FECHA: ${data['fecha']} HR.  ${data['hora']}',
+                'ARMAS UTILIZADAS un cuchillo de cocina'
+              ]),
+              textoNegrilla('3. DENUNCIANTE O VICTIMA:'),
+              textoCuadro([
+                'NOMBRES: ${data['nombreDenunciante']} ${data['apellidoDenunciante']}',
+                'CI: ${data['ciDenunciante']}',
+                'Dirección: ${data['direccionDenunciante']}',
+                'PROFESION/OCUPACION: ${data['profesionDenunciante']}',
+                'Teléfono: ${data['telefonoDenunciante']}',
+              ]),
+              textoNegrilla('5. PERSONA A:. APREHENDIDO'),
+              textoCuadro([
+                'NOMBRES Y APELLIDOS: ${data['nombreDenunciado']}',
+                'CI: ${data['ciDenunciado']}',
+                'Dirección: ${data['direccionDenunciado']}',
+                'PROFESION/OCUPACION: ${data['profesionDenunciado']}',
+              ]),
+              textoNegrilla('6. RESEÑA DEL CASO:'),
+              textoCuadro([data['hechos']]),
             ];
           },
         ),

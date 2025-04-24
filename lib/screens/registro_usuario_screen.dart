@@ -157,12 +157,16 @@ class _RegistroUsuarioScreenState extends State<RegistroUsuarioScreen> {
               TextFormField(
                 controller: _usuarioController,
                 decoration: const InputDecoration(
-                  labelText: 'Usuario',
+                  labelText: 'Correo',
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Por favor ingrese un nombre de usuario';
+                    return 'Por favor ingrese un correo';
+                  }
+                 final emailRegex = RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$');
+                  if (!emailRegex.hasMatch(value)) {
+                    return 'Ingrese un correo válido';
                   }
                   return null;
                 },

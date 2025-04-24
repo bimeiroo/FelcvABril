@@ -15,7 +15,33 @@ class AuthService {
 
   Future<bool> registrarUsuario(Usuario usuario) async {
     try {
-      final usuarios = null;// await getFuncionarios();
+      final response = await supabase.auth.signUp(
+        email: usuario.usuario,
+        password: usuario.password,
+      );
+      print(response);
+      if (response.user != null) {
+        print('Usuario creado con éxito: ${response.user!.id}');
+
+        final responseClient = await makeRpc(
+          'auth_registrar_usuario',
+          params: {
+            'p_auth': response.user!.id,
+            'p_nombre': usuario.nombre,
+            'p_apellido': usuario.apellido,
+            'p_grado': usuario.grado,
+            'p_usuario': usuario.usuario,
+            'p_carnet': usuario.carnet,
+            'p_telefono': usuario.telefono,
+            'p_rol': usuario.rol
+          },
+        );
+        _logger.info('Usuario registrado: ${usuario.usuario}');
+        return true;
+      } else {
+        return false;
+      }
+      final usuarios = null; // await getFuncionarios();
 
       // Verificar si ya existe un usuario con el mismo nombre de usuario
       if (usuarios.any((u) => u.usuario == usuario.usuario)) {
