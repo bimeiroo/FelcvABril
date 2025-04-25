@@ -247,7 +247,10 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
           fechaRegistro: _denuncia.fechaRegistro,
           telefonoFuncionarioAdicional: _denuncia.telefonoFuncionarioAdicional,
           carnetFuncionarioAdicional: _denuncia.carnetFuncionarioAdicional,
-          sigla: _denuncia.sigla);
+          sigla: _denuncia.sigla,
+          latitud: _denuncia.latitud,
+          longitud: _denuncia.longitud
+          );
 
       final success =true;
           // await denunciaService.actualizarDenuncia(denunciaActualizada,);

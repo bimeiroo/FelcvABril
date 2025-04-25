@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SeleccionarUbicacionScreen extends StatefulWidget {
-  const SeleccionarUbicacionScreen({super.key});
-
+  const SeleccionarUbicacionScreen({super.key, required this.direccion, required this.latitud, required this.longitud});
+  final String direccion;
+  final String latitud;
+  final String longitud;
   @override
   State<SeleccionarUbicacionScreen> createState() =>
       _SeleccionarUbicacionScreenState();
@@ -13,6 +15,15 @@ class _SeleccionarUbicacionScreenState
   final _direccionController = TextEditingController();
   final _latitudController = TextEditingController();
   final _longitudController = TextEditingController();
+
+
+  @override
+  void initState() {
+    _direccionController.text = widget.direccion;
+    _latitudController.text = widget.latitud;
+    _longitudController.text = widget.longitud;
+    super.initState();
+  }
 
   @override
   void dispose() {
@@ -34,8 +45,8 @@ class _SeleccionarUbicacionScreenState
 
     Navigator.pop(context, {
       'address': _direccionController.text,
-      'lat': double.parse(_latitudController.text),
-      'lng': double.parse(_longitudController.text),
+      'lat': _latitudController.text,
+      'lng': _longitudController.text,
     });
   }
 

@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:felcv/services/custom_pdf.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:path_provider/path_provider.dart';
@@ -957,6 +958,13 @@ class PdfService {
     required Function(String) onError,
   }) async {
     try {
+      final fechaActual = DateTime.now();
+
+      final anio = fechaActual.year;
+
+      final formatoFecha = DateFormat('yyyy-MM-dd');
+      final fechaFormateada = formatoFecha.format(fechaActual);
+
       _logger.info('Iniciando generación de PDF');
 
       // Cargar el logo
@@ -1005,15 +1013,17 @@ class PdfService {
                         pw.Column(
                           crossAxisAlignment: pw.CrossAxisAlignment.center,
                           children: [
-                            textoEncabezado('Caso  68/2024',fontSize: 10),
+                            textoEncabezado('Caso  ${data['id']}/$anio',
+                                fontSize: 10),
                           ],
                         ),
-                        textoEncabezado('Dir. Dptal. de la FELCV de: MONTERO',fontSize: 10),
-                        textoEncabezado('En Fecha 26/01/2024',fontSize: 10),
+                        textoEncabezado('Dir. Dptal. de la FELCV de: MONTERO',
+                            fontSize: 10),
+                        textoEncabezado('En Fecha $fechaFormateada', fontSize: 10),
                       ],
                     )
                   ]),
-                  pw.SizedBox(height: 20),
+              pw.SizedBox(height: 20),
               pw.Center(
                 child: pw.Column(
                   children: [
@@ -1036,7 +1046,7 @@ class PdfService {
               ]),
               textoNegrilla('2. INFORMACION SOBRE EL HECHO:'),
               textoCuadro([
-                'Tipo de Denuncia: ${data['tipoDenuncia']}',
+                'NATURALEZA DEL HECHO: ${data['tipoDenuncia']}',
                 'LUGAR DEL HECHO : ${data['lugar']} ',
                 'FECHA: ${data['fecha']} HR.  ${data['hora']}',
                 'ARMAS UTILIZADAS un cuchillo de cocina'
@@ -1058,6 +1068,26 @@ class PdfService {
               ]),
               textoNegrilla('6. RESEÑA DEL CASO:'),
               textoCuadro([data['hechos']]),
+              pw.SizedBox(height: 50), // Espacio antes de las firmas
+        pw.Row(
+          mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly,
+          children: [
+            pw.Column(
+              children: [
+                pw.Text('.....................................'),
+                pw.Text('NOMBRE Y FIRMA'),
+                pw.Text('POLICIA QUE INTERVINO'),
+              ],
+            ),
+            pw.Column(
+              children: [
+                pw.Text('.....................................'),
+                pw.Text('NOMBRE Y FIRMA'),
+                pw.Text('POLICIA QUE INTERVINO'),
+              ],
+            ),
+          ],
+        ),
             ];
           },
         ),

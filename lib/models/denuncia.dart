@@ -27,6 +27,8 @@ class Denuncia {
   final String sigla;
   final String estado;
   final String tipoDenuncia;
+  final String latitud;
+  final String longitud;
   final DateTime fechaRegistro;
 
   Denuncia({
@@ -59,6 +61,8 @@ class Denuncia {
     required this.telefonoFuncionarioAdicional,
     required this.carnetFuncionarioAdicional,
     required this.sigla,
+    required this.latitud,
+    required this.longitud,
   });
 
   Map<String, dynamic> toJson() {
@@ -88,6 +92,8 @@ class Denuncia {
       'nombreFuncionarioAdicional': nombreFuncionarioAdicional,
       'estado': estado,
       'tipoDenuncia': tipoDenuncia,
+      'longitud': longitud,
+      'latitud': latitud,
       'fechaRegistro': fechaRegistro.toIso8601String(),
     };
   }
@@ -124,6 +130,8 @@ class Denuncia {
           json['telefonoFuncionarioAdicional'] as String,
       carnetFuncionarioAdicional: json['carnetFuncionarioAdicional'] as String,
       sigla: json['sigla'] as String,
+      latitud: json['latitud'] as String,
+      longitud: json['longitud'] as String,
     );
   }
   Denuncia copyWith({
@@ -156,6 +164,8 @@ class Denuncia {
     String? telefonoFuncionarioAdicional,
     String? carnetFuncionarioAdicional,
     String? sigla,
+    String? longitud,
+    String? latitud,
   }) {
     return Denuncia(
       id: id ?? this.id,
@@ -191,6 +201,8 @@ class Denuncia {
       carnetFuncionarioAdicional:
           carnetFuncionarioAdicional ?? this.carnetFuncionarioAdicional,
       sigla: sigla ?? this.sigla,
+      longitud: longitud ?? this.longitud,
+      latitud: latitud ?? this.latitud,
     );
   }
 }
@@ -228,5 +240,7 @@ Denuncia fromJsonDenuncia(Map<String, dynamic> json) {
     telefonoFuncionarioAdicional: json['telefono_funcionario_adicional'],
     carnetFuncionarioAdicional: json['carnet_funcionario_adicional'],
     sigla: json['sigla'],
+    latitud: json['latitud'] ?? '',
+    longitud: json['logitud'] ?? '',
   );
 }

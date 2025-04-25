@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-2025/04/12-11:30:06.718 512c Reusing MANIFEST C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.80701b00\flutter_tools_chrome_device.530c1b28\Default\Local Storage\leveldb/MANIFEST-000001
-2025/04/12-11:30:06.722 512c Recovering log #3
-2025/04/12-11:30:06.723 512c Reusing old log C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.80701b00\flutter_tools_chrome_device.530c1b28\Default\Local Storage\leveldb/000003.log 
-=======
-2025/04/23-07:12:49.794 12c4 Reusing MANIFEST C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.5796e93c\flutter_tools_chrome_device.7d425e8\Default\Local Storage\leveldb/MANIFEST-000001
-2025/04/23-07:12:49.798 12c4 Recovering log #10
-2025/04/23-07:12:49.801 12c4 Reusing old log C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.5796e93c\flutter_tools_chrome_device.7d425e8\Default\Local Storage\leveldb/000010.log 
-2025/04/23-07:12:49.802 12c4 Delete type=0 #3
-2025/04/23-07:12:49.802 12c4 Delete type=0 #4
-2025/04/23-07:12:49.802 12c4 Delete type=0 #7
->>>>>>> registerUser
+2025/04/24-20:53:18.687 4dec Reusing MANIFEST C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.9f806cb8\flutter_tools_chrome_device.cea4730\Default\Local Storage\leveldb/MANIFEST-000001
+2025/04/24-20:53:18.694 4dec Recovering log #13
+2025/04/24-20:53:18.698 4dec Reusing old log C:\Users\GEEKST~1\AppData\Local\Temp\flutter_tools.9f806cb8\flutter_tools_chrome_device.cea4730\Default\Local Storage\leveldb/000013.log 
+2025/04/24-20:53:18.699 4dec Delete type=0 #3
+2025/04/24-20:53:18.699 4dec Delete type=0 #4
+2025/04/24-20:53:18.699 4dec Delete type=0 #7
+2025/04/24-20:53:18.699 4dec Delete type=0 #10
