@@ -67,14 +67,15 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
       TextEditingController();
   final TextEditingController _telefonoFuncionarioController =
       TextEditingController();
+  final TextEditingController _direccionSeleccionada = TextEditingController();
+  final TextEditingController _latitudController = TextEditingController();
+  final TextEditingController _longitudController = TextEditingController();
 
   String _tipoDenunciaSeleccionado = 'Violencia Física';
   String _estadoSeleccionado = 'Pendiente';
   final String _unidad = 'FELCV';
   String? _funcionarioAsignado;
-  String? _idDenuncia;
   String? _funcionarioAdicional;
-  String _direccionSeleccionada = '';
   bool _isLoading = false;
   final ImagePicker _picker = ImagePicker();
   List<String> _fotos = [];
@@ -193,7 +194,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _apellidoController.text = denuncia.apellidoDenunciante;
     _ciController.text = denuncia.ciDenunciante;
     _telefonoController.text = denuncia.telefonoDenunciante;
-    _direccionController.text = denuncia.direccionDenunciante;
+    _direccionSeleccionada.text = denuncia.direccionDenunciante;
     _profesionController.text = denuncia.profesionDenunciante;
     _nombreDenunciadoController.text = denuncia.nombreDenunciado;
     _ciDenunciadoController.text = denuncia.ciDenunciado;
@@ -206,26 +207,34 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _tipoDenunciaSeleccionado = denuncia.tipoDenuncia;
     _estadoSeleccionado = denuncia.estado;
     _fotos = denuncia.imagenes;
-    _idDenuncia = denuncia.id;
     _funcionarioAdicional = denuncia.funcionarioAdicional;
     _carnetFuncionarioController.text = denuncia.carnetFuncionarioAdicional;
     _telefonoFuncionarioController.text = denuncia.telefonoFuncionarioAdicional;
     _siglaController.text = denuncia.sigla;
+    _latitudController.text = denuncia.latitud;
+    _longitudController.text = denuncia.longitud;
 
     _logger.info('Funcionario asignado cargado: $_funcionarioAsignado');
   }
 
-  Future<void> _seleccionarUbicacion() async {
+  Future<void> _seleccionarUbicacion(
+      String direccion, String latitud, String longitud) async {
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const SeleccionarUbicacionScreen(),
+        builder: (context) => SeleccionarUbicacionScreen(
+          direccion: direccion,
+          latitud: latitud,
+          longitud: longitud,
+        ),
       ),
     );
 
     if (result != null) {
       setState(() {
-        _direccionSeleccionada = result['address'];
+        _direccionSeleccionada.text = result['address'];
+        _latitudController.text = result['lat'];
+        _longitudController.text = result['lng'];
       });
     }
   }
@@ -290,8 +299,8 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           apellidoDenunciante: _apellidoController.text,
           ciDenunciante: _ciController.text,
           telefonoDenunciante: _telefonoController.text,
-          direccionDenunciante: _direccionSeleccionada.isNotEmpty
-              ? _direccionSeleccionada
+          direccionDenunciante: _direccionSeleccionada.text.isNotEmpty
+              ? _direccionSeleccionada.text
               : _direccionController.text,
           profesionDenunciante: _profesionController.text,
           nombreDenunciado: _nombreDenunciadoController.text,
@@ -316,6 +325,8 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           telefonoFuncionarioAdicional: _telefonoFuncionarioController.text,
           carnetFuncionarioAdicional: _carnetFuncionarioController.text,
           sigla: _siglaController.text,
+          latitud: _latitudController.text,
+          longitud: _longitudController.text,
         );
 
         final success = widget.modoEdicion
@@ -368,13 +379,11 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     final session = context.read<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
-        title:
-            Column(
-              children: [
-                Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
-                Text(session.state.usuarioActual!.nombreCompleto(), style: const TextStyle(fontSize: 12)),
-              ],
-            ),
+        title: Column(
+          children: [
+            Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
+          ],
+        ),
         backgroundColor: Colors.green[800],
         foregroundColor: Colors.white,
       ),
@@ -394,8 +403,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                   filled: true,
                   fillColor: Color(0xFFEEEEEE),
                 ),
-                readOnly: true,
-                enabled: false,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor ingrese la fecha';
@@ -413,8 +420,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                   filled: true,
                   fillColor: Color(0xFFEEEEEE),
                 ),
-                readOnly: true,
-                enabled: false,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor ingrese la hora';
@@ -515,7 +520,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                     ),
                     const SizedBox(height: 16),
                     InkWell(
-                      onTap: _seleccionarUbicacion,
+                      onTap: () {
+                        _seleccionarUbicacion(_direccionSeleccionada.text,
+                            _latitudController.text, _longitudController.text);
+                      },
                       child: InputDecorator(
                         decoration: InputDecoration(
                           labelText: 'Dirección del Denunciante o victima ',
@@ -525,11 +533,11 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                           ),
                         ),
                         child: Text(
-                          _direccionSeleccionada.isEmpty
+                          _direccionSeleccionada.text.isEmpty
                               ? 'Seleccionar ubicación en el mapa para mayor precision'
-                              : _direccionSeleccionada,
+                              : _direccionSeleccionada.text,
                           style: TextStyle(
-                            color: _direccionSeleccionada.isEmpty
+                            color: _direccionSeleccionada.text.isEmpty
                                 ? Colors.grey[600]
                                 : Colors.black,
                           ),

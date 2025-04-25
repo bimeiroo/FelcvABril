@@ -14,7 +14,6 @@ class BuscarDenunciasScreen extends StatefulWidget {
 
 class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
   final _searchController = TextEditingController();
-  bool _isLoading = false;
   final DenunciaService _denunciaService = DenunciaService();
 
   @override
@@ -28,33 +27,12 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
     super.dispose();
   }
 
-  Future<void> _buscarDenuncias(String query) async {
-    setState(() => _isLoading = true);
-  
-    try {
-      final denuncias = await _denunciaService.buscarDenuncias(query);
-      if (mounted) {
-        setState(() {
-          // _denuncias = denuncias;
-          _isLoading = false;
-        });
-      }
-    } catch (e) {
-      if (mounted) {
-        setState(() => _isLoading = false);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error al buscar denuncias: ${e.toString()}'),
-            backgroundColor: Colors.red,
-          ),
-        );
-      }
-    }
-  }
 
   void _verDetalleDenuncia(Denuncia denuncia) async{
     final Denuncia searchDenuncia = await _denunciaService.encontrarDenuncia(denuncia);
+
     Navigator.push(
+      // ignore: use_build_context_synchronously
       context,
       MaterialPageRoute(
         builder: (context) => DetalleDenunciaScreen(denuncia: searchDenuncia),
@@ -63,6 +41,7 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
       // Recargar las denuncias al volver del detalle
       // _cargarDenuncias();
     });
+
   }
 
   @override

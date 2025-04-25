@@ -74,7 +74,9 @@ class DenunciaService {
         'p_telefono_funcionario_adicional':
             denuncia.telefonoFuncionarioAdicional,
         'p_carnet_funcionario_adicional': denuncia.carnetFuncionarioAdicional,
-        'p_sigla': denuncia.sigla
+        'p_sigla': denuncia.sigla,
+        'p_latitud': denuncia.latitud,
+        'p_logitud': denuncia.longitud,
       };
 
       final response = await makeRpc('den_insertar_denuncia', params: params);
@@ -131,7 +133,9 @@ class DenunciaService {
         'p_telefono_funcionario_adicional':
             denuncia.telefonoFuncionarioAdicional,
         'p_carnet_funcionario_adicional': denuncia.carnetFuncionarioAdicional,
-        'p_sigla': denuncia.sigla
+        'p_sigla': denuncia.sigla,
+        'p_latitud': denuncia.latitud,
+        'p_logitud': denuncia.longitud,
       };
 
       final response = await makeRpc('den_actualizar_denuncia', params: params);
@@ -238,12 +242,11 @@ class DenunciaService {
 
   Future<Denuncia> encontrarDenuncia(Denuncia denuncia) async {
     try {
-      
-    final params = {
-      'vid': int.parse(denuncia.id!),
-    };
-    final response = await makeRpc('den_encontrar_denuncia', params: params);
-    return fromJsonDenuncia(response['data']);
+      final params = {
+        'vid': int.parse(denuncia.id!),
+      };
+      final response = await makeRpc('den_encontrar_denuncia', params: params);
+      return fromJsonDenuncia(response['data']);
     } catch (e) {
       return fromJsonDenuncia({});
     }
