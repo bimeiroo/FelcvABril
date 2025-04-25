@@ -25,10 +25,8 @@ Future<void> uploadImage(String blobUrl, String name) async {
     final data = reader.result as Uint8List;
 
     // Subir a Supabase desde Uint8List
-    await supabase.storage.from('transacciones').uploadBinary(name, data);
-
+    await supabase.storage.from('archivos').uploadBinary(name, data);
   } catch (e) {
     print('Error subiendo imagen: $e');
   }
 }
-

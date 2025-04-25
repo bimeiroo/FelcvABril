@@ -26,8 +26,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    _usuarioController.text = 'juan_montecinos@fubode.org';
-    _passwordController.text = '123456';
+    _usuarioController.text = '';
+    _passwordController.text = '';
   }
 
   void _irARegistro() {

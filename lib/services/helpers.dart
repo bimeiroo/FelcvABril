@@ -24,6 +24,6 @@ String namePath() {
 Future<String> obtenerUrlSupabase(String path) async {
   await dotenv.load(fileName: ".env");
   String bucketUrl =
-      '${dotenv.env['API_URL'].toString()}/storage/v1/object/public/transacciones/';
+      '${dotenv.env['API_URL'].toString()}/storage/v1/object/public/archivos/';
   return "$bucketUrl$path";
 }
