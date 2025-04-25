@@ -75,7 +75,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   String _estadoSeleccionado = 'Pendiente';
   final String _unidad = 'FELCV';
   String? _funcionarioAsignado;
-  String? _idDenuncia;
   String? _funcionarioAdicional;
   bool _isLoading = false;
   final ImagePicker _picker = ImagePicker();
@@ -208,7 +207,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _tipoDenunciaSeleccionado = denuncia.tipoDenuncia;
     _estadoSeleccionado = denuncia.estado;
     _fotos = denuncia.imagenes;
-    _idDenuncia = denuncia.id;
     _funcionarioAdicional = denuncia.funcionarioAdicional;
     _carnetFuncionarioController.text = denuncia.carnetFuncionarioAdicional;
     _telefonoFuncionarioController.text = denuncia.telefonoFuncionarioAdicional;

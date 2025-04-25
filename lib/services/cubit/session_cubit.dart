@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:felcv/models/denuncia.dart';
 import 'package:felcv/models/usuario.dart';
 import 'package:felcv/services/supabase_service.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:logging/logging.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -82,7 +83,7 @@ class SessionCubit extends Cubit<SessionState> {
       }
       emit(state.copyWith(denuncias: denuncias));
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
     }
   }
 
@@ -99,7 +100,7 @@ class SessionCubit extends Cubit<SessionState> {
       emit(state.copyWith(denuncias: denuncias, isLoading: false));
     } catch (e) {
       emit(state.copyWith(isLoading: false));
-      print(e);
+      debugPrint(e.toString());
     }
   }
 }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'dart:io';
 import '../models/denuncia.dart';
-import '../services/denuncia_service.dart';
 import '../services/pdf_service.dart';
 import '../screens/registrar_denuncia_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -216,8 +215,6 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
     setState(() => _isLoading = true);
 
     try {
-      final denunciaService = DenunciaService();
-
       final denunciaActualizada = Denuncia(
           id: _denuncia.id,
           numeroDenuncia: _denuncia.numeroDenuncia,
@@ -252,11 +249,9 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
           longitud: _denuncia.longitud
           );
 
-      final success =true;
-          // await denunciaService.actualizarDenuncia(denunciaActualizada,);
+  
 
       if (mounted) {
-        if (success) {
           setState(() => _denuncia = denunciaActualizada);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -264,14 +259,6 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
               backgroundColor: Colors.green,
             ),
           );
-        } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Error al actualizar el estado'),
-              backgroundColor: Colors.red,
-            ),
-          );
-        }
       }
     } catch (e) {
       if (mounted) {

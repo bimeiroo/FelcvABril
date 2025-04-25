@@ -1,5 +1,6 @@
 // import 'dart:html' as html;
 import 'dart:typed_data';
+import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:universal_html/html.dart';
 
@@ -28,7 +29,7 @@ Future<void> uploadImage(String blobUrl, String name) async {
     await supabase.storage.from('transacciones').uploadBinary(name, data);
 
   } catch (e) {
-    print('Error subiendo imagen: $e');
+    debugPrint(e.toString());
   }
 }
 

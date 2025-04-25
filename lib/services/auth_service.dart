@@ -8,7 +8,6 @@ import 'package:logging/logging.dart';
 class AuthService {
   final SharedPreferences _prefs;
   final _logger = Logger('AuthService');
-  static const String _usuariosKey = 'usuarios';
   static const String _usuarioActualKey = 'usuario_actual';
 
   AuthService(this._prefs);
@@ -19,11 +18,8 @@ class AuthService {
         email: usuario.usuario,
         password: usuario.password,
       );
-      print(response);
       if (response.user != null) {
-        print('Usuario creado con éxito: ${response.user!.id}');
-
-        final responseClient = await makeRpc(
+        await makeRpc(
           'auth_registrar_usuario',
           params: {
             'p_auth': response.user!.id,
@@ -41,21 +37,6 @@ class AuthService {
       } else {
         return false;
       }
-      final usuarios = null; // await getFuncionarios();
-
-      // Verificar si ya existe un usuario con el mismo nombre de usuario
-      if (usuarios.any((u) => u.usuario == usuario.usuario)) {
-        _logger.warning('Usuario ya existe: ${usuario.usuario}');
-        return false;
-      }
-
-      usuarios.add(usuario);
-      final usuariosJson = usuarios.map((u) => u.toJson()).toList();
-      final resultado =
-          await _prefs.setString(_usuariosKey, jsonEncode(usuariosJson));
-
-      _logger.info('Usuario registrado: ${usuario.usuario}');
-      return resultado;
     } catch (e) {
       _logger.severe('Error al registrar usuario: $e');
       return false;
