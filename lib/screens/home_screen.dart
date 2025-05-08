@@ -1,4 +1,8 @@
+import 'package:felcv/screens/login_screen.dart';
+import 'package:felcv/services/cubit/session_cubit.dart';
+import 'package:felcv/services/supabase_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'registrar_denuncia_screen.dart';
 import 'buscar_denuncias_screen.dart';
 
@@ -7,6 +11,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final session = context.read<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('FELCV'),
@@ -32,10 +37,26 @@ class HomeScreen extends StatelessWidget {
                   size: 100,
                   color: Colors.white,
                 ),
-                const SizedBox(height: 32),
                 const Text(
                   'Sistema de Denuncias',
                   style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 32),
+                Text(
+                  'Bienvenido'.toUpperCase(),
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  '${session.state.usuarioActual!.grado.trim()} ${session.state.usuarioActual!.nombre.trim()} ${session.state.usuarioActual!.apellido.trim()}',
+                  style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -50,7 +71,9 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const RegistrarDenunciaScreen(),
+                          builder: (context) => RegistrarDenunciaScreen(
+                            context: context,
+                          ),
                         ),
                       );
                     },
@@ -72,11 +95,16 @@ class HomeScreen extends StatelessWidget {
                   height: 56,
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BuscarDenunciasScreen(),
-                        ),
+                      session.obtenerDenuncias().then(
+                        (value) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const BuscarDenunciasScreen(),
+                            ),
+                          );
+                        },
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -87,6 +115,32 @@ class HomeScreen extends StatelessWidget {
                     icon: const Icon(Icons.search),
                     label: const Text(
                       'Buscar Denuncias',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                SizedBox(
+                  width: double.infinity,
+                  height: 56,
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      supabase.auth.signOut();
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                          );
+                     
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.green[800],
+                      elevation: 4,
+                    ),
+                    icon: const Icon(Icons.exit_to_app),
+                    label: const Text(
+                      'Salir',
                       style: TextStyle(fontSize: 18),
                     ),
                   ),

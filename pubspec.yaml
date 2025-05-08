@@ -10,6 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+
+  flutter_dotenv: ^5.2.1
+  supabase_flutter: ^2.8.3
+  flutter_bloc: ^9.0.0
+  equatable: ^2.0.7
   
   # UI y Animaciones
   flutter_animate: ^4.3.0
@@ -20,7 +25,6 @@ dependencies:
   cached_network_image: ^3.3.0
   
   # Gestión de Estado y Almacenamiento
-  provider: ^6.1.1
   shared_preferences: ^2.2.2
   flutter_secure_storage: ^9.0.0
   
@@ -56,6 +60,8 @@ dependencies:
   geolocator: ^10.1.0
   google_maps_flutter: ^2.5.0
   geocoding: ^2.1.1
+  file_picker: ^8.3.2
+  html: ^0.15.5+1
 
 dev_dependencies:
   flutter_test:
@@ -65,9 +71,11 @@ dev_dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.3.7
 
+
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
     - assets/icons/
     - assets/fonts/ 
+    - .env

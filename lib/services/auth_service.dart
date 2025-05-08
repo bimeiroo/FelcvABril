@@ -1,33 +1,42 @@
 import 'dart:convert';
+import 'package:felcv/services/supabase_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/usuario.dart';
 import 'package:logging/logging.dart';
 
 class AuthService {
   final SharedPreferences _prefs;
   final _logger = Logger('AuthService');
-  static const String _usuariosKey = 'usuarios';
   static const String _usuarioActualKey = 'usuario_actual';
 
   AuthService(this._prefs);
 
   Future<bool> registrarUsuario(Usuario usuario) async {
     try {
-      final usuarios = await getFuncionarios();
-
-      // Verificar si ya existe un usuario con el mismo nombre de usuario
-      if (usuarios.any((u) => u.usuario == usuario.usuario)) {
-        _logger.warning('Usuario ya existe: ${usuario.usuario}');
+      final response = await supabase.auth.signUp(
+        email: usuario.usuario,
+        password: usuario.password,
+      );
+      if (response.user != null) {
+        await makeRpc(
+          'auth_registrar_usuario',
+          params: {
+            'p_auth': response.user!.id,
+            'p_nombre': usuario.nombre,
+            'p_apellido': usuario.apellido,
+            'p_grado': usuario.grado,
+            'p_usuario': usuario.usuario,
+            'p_carnet': usuario.carnet,
+            'p_telefono': usuario.telefono,
+            'p_rol': usuario.rol
+          },
+        );
+        _logger.info('Usuario registrado: ${usuario.usuario}');
+        return true;
+      } else {
         return false;
       }
-
-      usuarios.add(usuario);
-      final usuariosJson = usuarios.map((u) => u.toJson()).toList();
-      final resultado =
-          await _prefs.setString(_usuariosKey, jsonEncode(usuariosJson));
-
-      _logger.info('Usuario registrado: ${usuario.usuario}');
-      return resultado;
     } catch (e) {
       _logger.severe('Error al registrar usuario: $e');
       return false;
@@ -36,11 +45,18 @@ class AuthService {
 
   Future<Usuario?> login(String usuario, String password) async {
     try {
-      final usuarios = await getFuncionarios();
-      final usuarioEncontrado = usuarios.firstWhere(
-        (u) => u.usuario == usuario && u.password == password,
-        orElse: () => throw Exception('Usuario o contraseña incorrectos'),
+      final response = await supabase.auth.signInWithPassword(
+        email: usuario,
+        password: password,
       );
+
+      final Session? session = response.session;
+      if (session == null) {
+        _logger.warning('Error de autenticación');
+        return null;
+      }
+      final userSupa = (supabase.auth.currentUser)?.id;
+      final usuarioEncontrado = await getFuncionario(userSupa!);
 
       // Guardar el usuario actual
       await _prefs.setString(
@@ -59,32 +75,9 @@ class AuthService {
     _logger.info('Logout exitoso');
   }
 
-  Future<Usuario?> getCurrentUser() async {
-    try {
-      final usuarioJson = _prefs.getString(_usuarioActualKey);
-      if (usuarioJson == null) return null;
-
-      return Usuario.fromJson(jsonDecode(usuarioJson));
-    } catch (e) {
-      _logger.warning('Error al obtener usuario actual: $e');
-      return null;
-    }
-  }
-
-  Future<List<Usuario>> getFuncionarios() async {
-    try {
-      final usuariosJson = _prefs.getString(_usuariosKey);
-      if (usuariosJson == null) return [];
-
-      final List<dynamic> decoded = jsonDecode(usuariosJson);
-      return decoded.map((json) => Usuario.fromJson(json)).toList();
-    } catch (e) {
-      _logger.severe('Error al obtener funcionarios: $e');
-      return [];
-    }
-  }
-
-  Future<List<Usuario>> getUsuarios() async {
-    return await getFuncionarios();
+  Future<Usuario> getFuncionario(String userAuth) async {
+    final response =
+        await makeRpc('auth_datos_sesion', params: {'p_id_auth': userAuth});
+    return fromJsonUsuario(response);
   }
 }

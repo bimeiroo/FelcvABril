@@ -1,22 +1,27 @@
+import 'dart:io';
+
+import 'package:felcv/services/cubit/session_cubit.dart';
+import 'package:felcv/services/helpers.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:logging/logging.dart';
-import 'dart:io';
 import '../models/denuncia.dart';
 import '../models/usuario.dart';
 import '../services/denuncia_service.dart';
-import '../services/auth_service.dart';
 import '../screens/seleccionar_ubicacion_screen.dart';
 
 class RegistrarDenunciaScreen extends StatefulWidget {
   final Denuncia? denuncia;
   final bool modoEdicion;
+  final BuildContext context;
 
   const RegistrarDenunciaScreen({
     super.key,
     this.denuncia,
     this.modoEdicion = false,
+    required this.context,
   });
 
   @override
@@ -62,18 +67,19 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
       TextEditingController();
   final TextEditingController _telefonoFuncionarioController =
       TextEditingController();
+  final TextEditingController _direccionSeleccionada = TextEditingController();
+  final TextEditingController _latitudController = TextEditingController();
+  final TextEditingController _longitudController = TextEditingController();
 
   String _tipoDenunciaSeleccionado = 'Violencia Física';
   String _estadoSeleccionado = 'Pendiente';
   final String _unidad = 'FELCV';
   String? _funcionarioAsignado;
   String? _funcionarioAdicional;
-  String _direccionSeleccionada = '';
   bool _isLoading = false;
   final ImagePicker _picker = ImagePicker();
   List<String> _fotos = [];
-  List<Usuario> _funcionarios = [];
-  Usuario? _usuarioActual;
+  Usuario? usuarioActual;
   Usuario? funcionarioAsignado;
   Usuario? funcionarioAdicional;
 
@@ -148,38 +154,19 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   }
 
   Future<void> _cargarDatos() async {
+    final session = widget.context.read<SessionCubit>();
     try {
       setState(() {
         _isLoading = true;
       });
-
-      final prefs = await SharedPreferences.getInstance();
-      final authService = AuthService(prefs);
-
-      // Cargar funcionarios primero
-      final funcionarios = await authService.getFuncionarios();
-      if (funcionarios.isEmpty) {
-        throw Exception('No se encontraron funcionarios registrados');
-      }
-
-      // Obtener usuario actual
-      final usuarioActual = await authService.getCurrentUser();
-      if (usuarioActual == null) {
-        throw Exception('No se pudo obtener el usuario actual');
-      }
-
-      if (!mounted) return;
-
+      final authUsuario = session.state.usuarioActual!;
       setState(() {
-        _funcionarios = funcionarios;
-        _usuarioActual = usuarioActual;
-        _funcionarioAsignado = usuarioActual.id;
+        usuarioActual = usuarioActual;
+        _funcionarioAsignado = authUsuario.id;
         _isLoading = false;
       });
     } catch (e) {
       _logger.severe('Error al cargar datos: $e');
-      if (!mounted) return;
-
       setState(() {
         _isLoading = false;
       });
@@ -207,7 +194,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _apellidoController.text = denuncia.apellidoDenunciante;
     _ciController.text = denuncia.ciDenunciante;
     _telefonoController.text = denuncia.telefonoDenunciante;
-    _direccionController.text = denuncia.direccionDenunciante;
+    _direccionSeleccionada.text = denuncia.direccionDenunciante;
     _profesionController.text = denuncia.profesionDenunciante;
     _nombreDenunciadoController.text = denuncia.nombreDenunciado;
     _ciDenunciadoController.text = denuncia.ciDenunciado;
@@ -220,46 +207,34 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     _tipoDenunciaSeleccionado = denuncia.tipoDenuncia;
     _estadoSeleccionado = denuncia.estado;
     _fotos = denuncia.imagenes;
-
-    // Buscar el funcionario asignado en la lista de funcionarios
-    if (_funcionarios.isNotEmpty && denuncia.funcionarioAsignado.isNotEmpty) {
-      _logger.info(
-          'Buscando funcionario asignado: ${denuncia.funcionarioAsignado}');
-
-      // Dividir el nombre completo en sus componentes
-      final nombreCompleto = denuncia.funcionarioAsignado.split(' ');
-      if (nombreCompleto.length >= 3) {
-        final grado = nombreCompleto[0];
-
-        // Buscar el funcionario que coincida con el grado y parte del nombre/apellido
-        _funcionarioAsignado = _funcionarios.firstWhere(
-          (f) =>
-              f.grado == grado &&
-              denuncia.funcionarioAsignado.contains(f.nombre) &&
-              denuncia.funcionarioAsignado.contains(f.apellido),
-          orElse: () {
-            _logger.warning(
-                'No se encontró el funcionario asignado exacto, usando el actual');
-            return _usuarioActual ?? _funcionarios.first;
-          },
-        ).id;
-      }
-    }
+    _funcionarioAdicional = denuncia.funcionarioAdicional;
+    _carnetFuncionarioController.text = denuncia.carnetFuncionarioAdicional;
+    _telefonoFuncionarioController.text = denuncia.telefonoFuncionarioAdicional;
+    _siglaController.text = denuncia.sigla;
+    _latitudController.text = denuncia.latitud;
+    _longitudController.text = denuncia.longitud;
 
     _logger.info('Funcionario asignado cargado: $_funcionarioAsignado');
   }
 
-  Future<void> _seleccionarUbicacion() async {
+  Future<void> _seleccionarUbicacion(
+      String direccion, String latitud, String longitud) async {
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const SeleccionarUbicacionScreen(),
+        builder: (context) => SeleccionarUbicacionScreen(
+          direccion: direccion,
+          latitud: latitud,
+          longitud: longitud,
+        ),
       ),
     );
 
     if (result != null) {
       setState(() {
-        _direccionSeleccionada = result['address'];
+        _direccionSeleccionada.text = result['address'];
+        _latitudController.text = result['lat'];
+        _longitudController.text = result['lng'];
       });
     }
   }
@@ -300,10 +275,9 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
       setState(() => _isLoading = true);
 
       try {
+        final session = widget.context.read<SessionCubit>();
         final denunciaService = DenunciaService();
-        final prefs = await SharedPreferences.getInstance();
-        final authService = AuthService(prefs);
-        final usuario = await authService.getCurrentUser();
+        final usuario = session.state.usuarioActual;
 
         if (usuario == null) {
           throw Exception('No hay usuario autenticado');
@@ -325,8 +299,8 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           apellidoDenunciante: _apellidoController.text,
           ciDenunciante: _ciController.text,
           telefonoDenunciante: _telefonoController.text,
-          direccionDenunciante: _direccionSeleccionada.isNotEmpty
-              ? _direccionSeleccionada
+          direccionDenunciante: _direccionSeleccionada.text.isNotEmpty
+              ? _direccionSeleccionada.text
               : _direccionController.text,
           profesionDenunciante: _profesionController.text,
           nombreDenunciado: _nombreDenunciadoController.text,
@@ -341,21 +315,25 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           funcionarioAsignado: usuario.id,
           funcionarioAdicional: _funcionarioAdicional ?? '',
           nombreFuncionarioAsignado:
-              '${usuario.grado} ${usuario.nombre} ${usuario.apellido}',
-          nombreFuncionarioAdicional:
-              _funcionarioAdicional != null && _funcionarioAdicional!.isNotEmpty
-                  ? _funcionarios
-                      .firstWhere((f) => f.id == _funcionarioAdicional)
-                      .nombreCompleto
-                  : '',
+              session.state.usuarioActual!.nombreCompleto(),
+          nombreFuncionarioAdicional: session
+              .state.usuarios[(int.tryParse(_funcionarioAdicional!) ?? 0) - 1]
+              .nombreCompleto(),
           tipoDenuncia: _tipoDenunciaSeleccionado,
           estado: 'Pendiente',
           fechaRegistro: DateTime.now(),
+          telefonoFuncionarioAdicional: _telefonoFuncionarioController.text,
+          carnetFuncionarioAdicional: _carnetFuncionarioController.text,
+          sigla: _siglaController.text,
+          latitud: _latitudController.text,
+          longitud: _longitudController.text,
         );
 
         final success = widget.modoEdicion
-            ? await denunciaService.actualizarDenuncia(denuncia)
-            : await denunciaService.guardarDenuncia(denuncia);
+            ? await denunciaService.actualizarDenuncia(
+                denuncia, session.state.usuarioActual!)
+            : await denunciaService.guardarDenuncia(
+                denuncia, session.state.usuarioActual!);
 
         if (mounted) {
           if (success) {
@@ -398,10 +376,14 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final session = context.read<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
-        title:
+        title: Column(
+          children: [
             Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
+          ],
+        ),
         backgroundColor: Colors.green[800],
         foregroundColor: Colors.white,
       ),
@@ -421,8 +403,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                   filled: true,
                   fillColor: Color(0xFFEEEEEE),
                 ),
-                readOnly: true,
-                enabled: false,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor ingrese la fecha';
@@ -440,8 +420,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                   filled: true,
                   fillColor: Color(0xFFEEEEEE),
                 ),
-                readOnly: true,
-                enabled: false,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor ingrese la hora';
@@ -542,7 +520,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                     ),
                     const SizedBox(height: 16),
                     InkWell(
-                      onTap: _seleccionarUbicacion,
+                      onTap: () {
+                        _seleccionarUbicacion(_direccionSeleccionada.text,
+                            _latitudController.text, _longitudController.text);
+                      },
                       child: InputDecorator(
                         decoration: InputDecoration(
                           labelText: 'Dirección del Denunciante o victima ',
@@ -552,11 +533,11 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                           ),
                         ),
                         child: Text(
-                          _direccionSeleccionada.isEmpty
+                          _direccionSeleccionada.text.isEmpty
                               ? 'Seleccionar ubicación en el mapa para mayor precision'
-                              : _direccionSeleccionada,
+                              : _direccionSeleccionada.text,
                           style: TextStyle(
-                            color: _direccionSeleccionada.isEmpty
+                            color: _direccionSeleccionada.text.isEmpty
                                 ? Colors.grey[600]
                                 : Colors.black,
                           ),
@@ -802,7 +783,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                       },
                     ),
                     const SizedBox(height: 16),
-                    _buildFuncionarioAsignadoSection(),
+                    _buildFuncionarioAsignadoSection(session.state.usuarios),
                     const SizedBox(height: 16),
                     TextFormField(
                       controller: _carnetFuncionarioController,
@@ -850,7 +831,9 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              _buildMediaSection(),
+              !widget.modoEdicion
+                  ? _buildMediaSection()
+                  : _buildMediaSectionEdit(),
               const SizedBox(height: 24),
               SizedBox(
                 height: 48,
@@ -872,8 +855,8 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     );
   }
 
-  Widget _buildFuncionarioAsignadoSection() {
-    if (_funcionarios.isEmpty) {
+  Widget _buildFuncionarioAsignadoSection(List<Usuario> usuarios) {
+    if (usuarios.isEmpty) {
       return const Center(child: CircularProgressIndicator());
     }
 
@@ -887,10 +870,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             prefixIcon: Icon(Icons.person_pin),
             contentPadding: EdgeInsets.symmetric(horizontal: 12),
           ),
-          items: _funcionarios.map((funcionario) {
+          items: usuarios.map((funcionario) {
             return DropdownMenuItem<String>(
               value: funcionario.id,
-              child: Text(funcionario.nombreCompleto),
+              child: Text(funcionario.nombreCompleto()),
             );
           }).toList(),
           onChanged: (value) {
@@ -913,10 +896,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             prefixIcon: Icon(Icons.person_pin_outlined),
             contentPadding: EdgeInsets.symmetric(horizontal: 12),
           ),
-          items: _funcionarios.map((funcionario) {
+          items: usuarios.map((funcionario) {
             return DropdownMenuItem<String>(
               value: funcionario.id,
-              child: Text(funcionario.nombreCompleto),
+              child: Text(funcionario.nombreCompleto()),
             );
           }).toList(),
           onChanged: (value) {
@@ -987,6 +970,111 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
     );
   }
 
+  Widget _buildMediaSectionEdit() {
+    return Card(
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.photo_library,
+                  color: Colors.green[800],
+                  size: 24,
+                ),
+                const SizedBox(width: 8),
+                const Text(
+                  'Fotos Adjuntas',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Spacer(),
+              ],
+            ),
+            const Divider(),
+            if (_fotos.isNotEmpty) ...[
+              Row(
+                children: [
+                  Icon(Icons.photo, color: Colors.green[800]),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Fotos (${_fotos.length})',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey[300]!),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _fotos.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: InkWell(
+                          onTap: () async {
+                            // _mostrarImagen(
+                            //     _denuncia.imagenes[index], context);
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: FutureBuilder<String>(
+                              future: obtenerUrlSupabase(_fotos[index]),
+                              builder: (context, snapshot) {
+                                if (snapshot.connectionState ==
+                                    ConnectionState.waiting) {
+                                  return const SizedBox(
+                                    width: 100,
+                                    height: 100,
+                                    child: Center(
+                                        child: CircularProgressIndicator(
+                                            strokeWidth: 2)),
+                                  );
+                                } else if (snapshot.hasError) {
+                                  return const SizedBox(
+                                    width: 100,
+                                    height: 100,
+                                    child:
+                                        Center(child: Icon(Icons.broken_image)),
+                                  );
+                                } else {
+                                  return Image.network(
+                                    snapshot.data!,
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                    errorBuilder:
+                                        (context, error, stackTrace) =>
+                                            const Icon(Icons.broken_image),
+                                  );
+                                }
+                              },
+                            ),
+                          )),
+                    );
+                  },
+                ),
+              )
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
   Widget _buildAddButton({
     required VoidCallback onTap,
     required IconData icon,
@@ -1029,12 +1117,19 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.file(
-              File(path),
-              width: 120,
-              height: 120,
-              fit: BoxFit.cover,
-            ),
+            child: kIsWeb
+                ? Image.network(
+                    path,
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover,
+                  )
+                : Image.file(
+                    File(path),
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover,
+                  ),
           ),
           Positioned(
             top: 4,
