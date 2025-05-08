@@ -246,19 +246,16 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
           carnetFuncionarioAdicional: _denuncia.carnetFuncionarioAdicional,
           sigla: _denuncia.sigla,
           latitud: _denuncia.latitud,
-          longitud: _denuncia.longitud
-          );
-
-  
+          longitud: _denuncia.longitud);
 
       if (mounted) {
-          setState(() => _denuncia = denunciaActualizada);
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Estado actualizado a: $nuevoEstado'),
-              backgroundColor: Colors.green,
-            ),
-          );
+        setState(() => _denuncia = denunciaActualizada);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Estado actualizado a: $nuevoEstado'),
+            backgroundColor: Colors.green,
+          ),
+        );
       }
     } catch (e) {
       if (mounted) {
@@ -628,7 +625,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
                 ),
                 const SizedBox(width: 8),
                 const Text(
-                  'Datos del Denunciado',
+                  'DENNUNCIANTE',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -664,7 +661,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
                 ),
                 const SizedBox(width: 8),
                 const Text(
-                  'Funcionarios Asignados',
+                  'POLICIA QUE INTERVINO:',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -701,7 +698,7 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
                 ),
                 const SizedBox(width: 8),
                 const Text(
-                  'Hechos',
+                  'BREVE DETALLE DEL HECHO:',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,

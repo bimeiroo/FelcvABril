@@ -1002,9 +1002,8 @@ class PdfService {
                             ],
                           ),
                         ),
-                        textoEncabezado('"GENOVEVA RIOS"'),
                         pw.SizedBox(width: 20),
-                        textoSubrayado('Minero-Santa Cruz - Bolivia'),
+                        textoSubrayado('Cochabamba - Bolivia'),
                       ],
                     ),
                     pw.Column(
@@ -1019,7 +1018,8 @@ class PdfService {
                         ),
                         textoEncabezado('Dir. Dptal. de la FELCV de: MONTERO',
                             fontSize: 10),
-                        textoEncabezado('En Fecha $fechaFormateada', fontSize: 10),
+                        textoEncabezado('En Fecha $fechaFormateada',
+                            fontSize: 10),
                       ],
                     )
                   ]),
@@ -1066,28 +1066,21 @@ class PdfService {
                 'Dirección: ${data['direccionDenunciado']}',
                 'PROFESION/OCUPACION: ${data['profesionDenunciado']}',
               ]),
-              textoNegrilla('6. RESEÑA DEL CASO:'),
+              textoNegrilla('6. BREVE DETALLE DEL HECHO:'),
               textoCuadro([data['hechos']]),
               pw.SizedBox(height: 50), // Espacio antes de las firmas
-        pw.Row(
-          mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly,
-          children: [
-            pw.Column(
-              children: [
-                pw.Text('.....................................'),
-                pw.Text('NOMBRE Y FIRMA'),
-                pw.Text('POLICIA QUE INTERVINO'),
-              ],
-            ),
-            pw.Column(
-              children: [
-                pw.Text('.....................................'),
-                pw.Text('NOMBRE Y FIRMA'),
-                pw.Text('POLICIA QUE INTERVINO'),
-              ],
-            ),
-          ],
-        ),
+              pw.Row(
+                mainAxisAlignment: pw.MainAxisAlignment.spaceEvenly,
+                children: [
+                  pw.Column(
+                    children: [
+                      pw.Text('.....................................'),
+                      pw.Text('NOMBRE Y FIRMA'),
+                      pw.Text('POLICIA QUE INTERVINO'),
+                    ],
+                  ),
+                ],
+              ),
             ];
           },
         ),
