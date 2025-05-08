@@ -1016,7 +1016,8 @@ class PdfService {
                                 fontSize: 10),
                           ],
                         ),
-                        textoEncabezado('Dir. Dptal. de la FELCV de: MONTERO',
+                        textoEncabezado(
+                            'Dir. Dptal. de la FELCV de: Cochabamba',
                             fontSize: 10),
                         textoEncabezado('En Fecha $fechaFormateada',
                             fontSize: 10),
@@ -1038,10 +1039,10 @@ class PdfService {
               textoNegrilla('1. POLICIAS QUE INTERVINIERON'),
               textoCuadro([
                 '1. ${data['nombreFuncionarioAsignado']}',
-                'UNIDAD POLICIAL: FELCV - Montero',
+                'UNIDAD POLICIAL: FELCV - Cochabamba',
                 'Zona: ${data['zona']}',
                 '2. ${data['nombreFuncionarioAdicional']}',
-                'UNIDAD POLICIAL: FELCV - Montero',
+                'UNIDAD POLICIAL: FELCV - Cochabamba',
                 'Zona: ${data['zona']}',
               ]),
               textoNegrilla('2. INFORMACION SOBRE EL HECHO:'),
