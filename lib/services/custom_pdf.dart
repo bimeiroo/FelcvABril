@@ -36,6 +36,89 @@ pw.Widget textoNegrilla(
   );
 }
 
+pw.Widget textoNegrillaBox(String texto) {
+  if (texto.toUpperCase().contains('APREHENDIDO')) {
+    return pw.Row(
+      crossAxisAlignment: pw.CrossAxisAlignment.start,
+      children: [
+        pw.Text(
+          texto,
+          style: pw.TextStyle(
+            fontSize: 10,
+            fontWeight: pw.FontWeight.bold,
+          ),
+        ),
+        pw.SizedBox(width: 5),
+        pw.Container(
+          width: 10,
+          height: 10,
+          decoration: pw.BoxDecoration(
+            border: pw.Border.all(width: 1),
+          ),
+        ),
+      ],
+    );
+  }
+
+  return pw.Text(
+    texto,
+    style: pw.TextStyle(
+      fontSize: 10,
+      fontWeight: pw.FontWeight.bold,
+    ),
+    textAlign: pw.TextAlign.center,
+  );
+}
+
+
+pw.Widget personaConCheckboxes() {
+  return pw.Row(
+    crossAxisAlignment: pw.CrossAxisAlignment.center,
+    children: [
+      // Texto "PERSONA:"
+      pw.Text(
+        '4: PERSONAS: ',
+        style: pw.TextStyle(
+          fontSize: 10,
+          fontWeight: pw.FontWeight.bold,
+        ),
+      ),
+      // Texto "APREHENDIDO" + cuadrado
+      pw.Text(
+        'APREHENDIDO ',
+        style: pw.TextStyle(
+          fontSize: 10,
+          fontWeight: pw.FontWeight.bold,
+        ),
+      ),
+      pw.Container(
+        width: 10,
+        height: 10,
+        decoration: pw.BoxDecoration(
+          border: pw.Border.all(width: 1),
+        ),
+      ),
+      pw.SizedBox(width: 10),
+      // Texto "ARRESTADO" + cuadrado
+      pw.Text(
+        'ARRESTADO ',
+        style: pw.TextStyle(
+          fontSize: 10,
+          fontWeight: pw.FontWeight.bold,
+        ),
+      ),
+      pw.Container(
+        width: 10,
+        height: 10,
+        decoration: pw.BoxDecoration(
+          border: pw.Border.all(width: 1),
+        ),
+      ),
+    ],
+  );
+}
+
+
 pw.Widget textoRecomendaciones(String texto) {
   return pw.Container(
     width: double.infinity,

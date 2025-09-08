@@ -293,7 +293,8 @@ class PdfService {
       // Añadir página con contenido
       pdf.addPage(
         pw.MultiPage(
-          pageFormat: PdfPageFormat.a4,
+          pageFormat: PdfPageFormat.legal,
+          margin: const pw.EdgeInsets.only(top: 32, left: 32, right: 32, bottom: 32),
           build: (context) => [
             pw.Header(
               level: 0,
@@ -977,7 +978,7 @@ class PdfService {
       // Agregar una página
       pdf.addPage(
         pw.MultiPage(
-          pageFormat: PdfPageFormat.a4,
+          pageFormat: PdfPageFormat.legal,
           margin: const pw.EdgeInsets.all(32),
           build: (pw.Context context) {
             return [
@@ -1029,13 +1030,13 @@ class PdfService {
                 child: pw.Column(
                   children: [
                     textoTitulo('INFORME DE INTERVENCION POLICIAL PREVENTIVA'),
-                    textoTitulo('ACCIOON DIRECTA'),
+                    textoTitulo('ACCION DIRECTA'),
                   ],
                 ),
               ),
               textoNormal('Arts. 293 y 298 del Código de Procedimiento Penal'),
               textoRecomendaciones(
-                  'NO HAGA USO DE CLAVES, ESCRIBA CON LETRA CLARA Y LEGIBLE, LEA CUIDADOSAMENTE CADA UNO DE LOS PUNTOS; EN CASO DE DUDA SOBRE EL LLENADO DEL PRESENTE INFORME, CONSULTE CON EL INVESTIGADOR QUE RECEPCIONA EL CASO'),
+                  'EN EL LLENADO DEL PRESENTE FORMULARIO, NO HAGA USO DE CLAVES, ESCRIBA CON LETRA CLARA Y LEGIBLE, LEA CUIDADOSAMENTE CADA UNO DE LOS PUNTOS ANTES DE LLENAR LA INFORMACION'),
               textoNegrilla('1. POLICIAS QUE INTERVINIERON'),
               textoCuadro([
                 '1. ${data['nombreFuncionarioAsignado']}',
@@ -1050,7 +1051,7 @@ class PdfService {
                 'NATURALEZA DEL HECHO: ${data['tipoDenuncia']}',
                 'LUGAR DEL HECHO : ${data['lugar']} ',
                 'FECHA: ${data['fecha']} HR.  ${data['hora']}',
-                'ARMAS UTILIZADAS un cuchillo de cocina'
+                // 'ARMAS UTILIZADAS un cuchillo de cocina'
               ]),
               textoNegrilla('3. DENUNCIANTE O VICTIMA:'),
               textoCuadro([
@@ -1060,7 +1061,8 @@ class PdfService {
                 'PROFESION/OCUPACION: ${data['profesionDenunciante']}',
                 'Teléfono: ${data['telefonoDenunciante']}',
               ]),
-              textoNegrilla('5. PERSONA A:. APREHENDIDO'),
+              // textoNegrillaBox('5. PERSONA:'),
+              personaConCheckboxes(),
               textoCuadro([
                 'NOMBRES Y APELLIDOS: ${data['nombreDenunciado']}',
                 'CI: ${data['ciDenunciado']}',

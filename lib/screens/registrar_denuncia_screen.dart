@@ -71,7 +71,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   final TextEditingController _latitudController = TextEditingController();
   final TextEditingController _longitudController = TextEditingController();
 
-  String _tipoDenunciaSeleccionado = 'Violencia Física';
+  String _tipoDenunciaSeleccionado = 'Violencia Familiar o Domestica';
   String _estadoSeleccionado = 'Pendiente';
   final String _unidad = 'FELCV';
   String? _funcionarioAsignado;
@@ -84,7 +84,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   Usuario? funcionarioAdicional;
 
   final List<String> _tiposDenuncia = [
-    'Violencia Física',
+    'Violencia Familiar o Domestica',
     'Violencia Psicológica',
     'Violencia Sexual',
     'Violencia Económica',
@@ -633,7 +633,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                     TextFormField(
                       controller: _hechosController,
                       decoration: const InputDecoration(
-                        labelText: 'Hechos',
+                        labelText: 'Breve detalle del hecho:',
                         prefixIcon: Icon(Icons.description),
                       ),
                       maxLines: 3,
