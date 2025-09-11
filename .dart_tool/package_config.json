@@ -4,7 +4,11 @@
     {
       "name": "_fe_analyzer_shared",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-82.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-67.0.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/_fe_analyzer_shared-67.0.0",
 >>>>>>> Stashed changes
@@ -14,7 +18,11 @@
     {
       "name": "analyzer",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-7.4.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-6.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-6.4.1",
 >>>>>>> Stashed changes
@@ -24,7 +32,11 @@
     {
       "name": "ansicolor",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/ansicolor-2.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/ansicolor-2.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/ansicolor-2.0.3",
 >>>>>>> Stashed changes
@@ -34,7 +46,11 @@
     {
       "name": "app_links",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/app_links-6.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links-6.4.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links-6.4.0",
 >>>>>>> Stashed changes
@@ -44,7 +60,11 @@
     {
       "name": "app_links_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_linux-1.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_linux-1.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_linux-1.0.3",
 >>>>>>> Stashed changes
@@ -54,7 +74,11 @@
     {
       "name": "app_links_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_platform_interface-2.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_platform_interface-2.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_platform_interface-2.0.2",
 >>>>>>> Stashed changes
@@ -64,7 +88,11 @@
     {
       "name": "app_links_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_web-1.0.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_web-1.0.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/app_links_web-1.0.4",
 >>>>>>> Stashed changes
@@ -74,7 +102,11 @@
     {
       "name": "archive",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/archive-4.0.7",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/archive-4.0.5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/archive-4.0.5",
 >>>>>>> Stashed changes
@@ -84,7 +116,11 @@
     {
       "name": "args",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.7.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.7.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.7.0",
 >>>>>>> Stashed changes
@@ -94,7 +130,11 @@
     {
       "name": "async",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.13.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.12.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.12.0",
 >>>>>>> Stashed changes
@@ -104,7 +144,11 @@
     {
       "name": "barcode",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/barcode-2.2.9",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/barcode-2.2.9",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/barcode-2.2.9",
 >>>>>>> Stashed changes
@@ -114,7 +158,11 @@
     {
       "name": "bidi",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/bidi-2.0.13",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/bidi-2.0.13",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/bidi-2.0.13",
 >>>>>>> Stashed changes
@@ -124,7 +172,11 @@
     {
       "name": "bloc",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/bloc-9.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/bloc-9.0.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/bloc-9.0.0",
 >>>>>>> Stashed changes
@@ -134,7 +186,11 @@
     {
       "name": "boolean_selector",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.2",
 >>>>>>> Stashed changes
@@ -144,7 +200,11 @@
     {
       "name": "build",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/build-2.4.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build-2.4.1",
 >>>>>>> Stashed changes
@@ -154,7 +214,11 @@
     {
       "name": "build_config",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/build_config-1.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_config-1.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_config-1.1.1",
 >>>>>>> Stashed changes
@@ -164,7 +228,11 @@
     {
       "name": "build_daemon",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/build_daemon-4.0.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_daemon-4.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_daemon-4.0.2",
 >>>>>>> Stashed changes
@@ -174,7 +242,11 @@
     {
       "name": "build_resolvers",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.4.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.4.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.4.2",
 >>>>>>> Stashed changes
@@ -184,7 +256,11 @@
     {
       "name": "build_runner",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner-2.4.15",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner-2.4.11",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner-2.4.11",
 >>>>>>> Stashed changes
@@ -194,7 +270,11 @@
     {
       "name": "build_runner_core",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner_core-8.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner_core-7.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/build_runner_core-7.3.1",
 >>>>>>> Stashed changes
@@ -204,7 +284,11 @@
     {
       "name": "built_collection",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/built_collection-5.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/built_collection-5.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/built_collection-5.1.1",
 >>>>>>> Stashed changes
@@ -214,7 +298,11 @@
     {
       "name": "built_value",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/built_value-8.10.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/built_value-8.9.5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/built_value-8.9.5",
 >>>>>>> Stashed changes
@@ -224,7 +312,11 @@
     {
       "name": "cached_network_image",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image-3.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image-3.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image-3.4.1",
 >>>>>>> Stashed changes
@@ -234,7 +326,11 @@
     {
       "name": "cached_network_image_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_platform_interface-4.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_platform_interface-4.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_platform_interface-4.1.1",
 >>>>>>> Stashed changes
@@ -244,7 +340,11 @@
     {
       "name": "cached_network_image_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_web-1.3.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_web-1.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_web-1.3.1",
 >>>>>>> Stashed changes
@@ -254,7 +354,11 @@
     {
       "name": "characters",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.4.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.4.0",
 >>>>>>> Stashed changes
@@ -264,7 +368,11 @@
     {
       "name": "charcode",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/charcode-1.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/charcode-1.4.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/charcode-1.4.0",
 >>>>>>> Stashed changes
@@ -274,7 +382,11 @@
     {
       "name": "checked_yaml",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3",
 >>>>>>> Stashed changes
@@ -284,7 +396,11 @@
     {
       "name": "cli_util",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.2",
 >>>>>>> Stashed changes
@@ -294,7 +410,11 @@
     {
       "name": "clock",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.2",
 >>>>>>> Stashed changes
@@ -304,7 +424,11 @@
     {
       "name": "code_builder",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/code_builder-4.10.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/code_builder-4.10.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/code_builder-4.10.0",
 >>>>>>> Stashed changes
@@ -314,7 +438,11 @@
     {
       "name": "collection",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.19.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.19.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.19.1",
 >>>>>>> Stashed changes
@@ -324,7 +452,11 @@
     {
       "name": "convert",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.2",
 >>>>>>> Stashed changes
@@ -334,7 +466,11 @@
     {
       "name": "cross_file",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.4+2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.4+2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.4+2",
 >>>>>>> Stashed changes
@@ -344,7 +480,11 @@
     {
       "name": "crypto",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.6",
 >>>>>>> Stashed changes
@@ -354,7 +494,11 @@
     {
       "name": "csslib",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.2",
 >>>>>>> Stashed changes
@@ -364,7 +508,11 @@
     {
       "name": "cupertino_icons",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
 >>>>>>> Stashed changes
@@ -374,7 +522,11 @@
     {
       "name": "dart_style",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-3.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-2.3.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/dart_style-2.3.6",
 >>>>>>> Stashed changes
@@ -384,7 +536,11 @@
     {
       "name": "dbus",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.11",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.11",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.11",
 >>>>>>> Stashed changes
@@ -394,7 +550,11 @@
     {
       "name": "equatable",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.7",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.7",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.7",
 >>>>>>> Stashed changes
@@ -404,7 +564,11 @@
     {
       "name": "fake_async",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.2",
 >>>>>>> Stashed changes
@@ -414,7 +578,11 @@
     {
       "name": "ffi",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.3",
 >>>>>>> Stashed changes
@@ -424,7 +592,11 @@
     {
       "name": "file",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.1",
 >>>>>>> Stashed changes
@@ -434,7 +606,11 @@
     {
       "name": "file_picker",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-8.3.7",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-8.3.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-8.3.2",
 >>>>>>> Stashed changes
@@ -444,7 +620,11 @@
     {
       "name": "file_selector_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.3+2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.3+2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.3+2",
 >>>>>>> Stashed changes
@@ -454,7 +634,11 @@
     {
       "name": "file_selector_macos",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4+3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4+2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4+2",
 >>>>>>> Stashed changes
@@ -464,7 +648,11 @@
     {
       "name": "file_selector_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.2",
 >>>>>>> Stashed changes
@@ -474,7 +662,11 @@
     {
       "name": "file_selector_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+4",
 >>>>>>> Stashed changes
@@ -484,7 +676,11 @@
     {
       "name": "fixnum",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.1",
 >>>>>>> Stashed changes
@@ -494,7 +690,11 @@
     {
       "name": "flutter",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/flutter/src/flutter/packages/flutter",
+=======
+      "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/packages/flutter",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/packages/flutter",
 >>>>>>> Stashed changes
@@ -504,7 +704,11 @@
     {
       "name": "flutter_animate",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_animate-4.5.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_animate-4.5.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_animate-4.5.2",
 >>>>>>> Stashed changes
@@ -514,7 +718,11 @@
     {
       "name": "flutter_bloc",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bloc-9.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bloc-9.1.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bloc-9.1.0",
 >>>>>>> Stashed changes
@@ -524,7 +732,11 @@
     {
       "name": "flutter_cache_manager",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_cache_manager-3.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_cache_manager-3.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_cache_manager-3.4.1",
 >>>>>>> Stashed changes
@@ -534,7 +746,11 @@
     {
       "name": "flutter_dotenv",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_dotenv-5.2.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_dotenv-5.2.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_dotenv-5.2.1",
 >>>>>>> Stashed changes
@@ -544,7 +760,11 @@
     {
       "name": "flutter_file_dialog",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_file_dialog-3.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_file_dialog-3.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_file_dialog-3.0.2",
 >>>>>>> Stashed changes
@@ -554,7 +774,11 @@
     {
       "name": "flutter_image_compress",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress-2.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress-2.4.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress-2.4.0",
 >>>>>>> Stashed changes
@@ -564,7 +788,11 @@
     {
       "name": "flutter_image_compress_common",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_common-1.0.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_common-1.0.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_common-1.0.6",
 >>>>>>> Stashed changes
@@ -574,7 +802,11 @@
     {
       "name": "flutter_image_compress_macos",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_macos-1.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_macos-1.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_macos-1.0.3",
 >>>>>>> Stashed changes
@@ -584,7 +816,11 @@
     {
       "name": "flutter_image_compress_ohos",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_ohos-0.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_ohos-0.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_ohos-0.0.3",
 >>>>>>> Stashed changes
@@ -594,7 +830,11 @@
     {
       "name": "flutter_image_compress_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_platform_interface-1.0.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_platform_interface-1.0.5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_platform_interface-1.0.5",
 >>>>>>> Stashed changes
@@ -604,7 +844,11 @@
     {
       "name": "flutter_image_compress_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_web-0.1.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_web-0.1.5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_image_compress_web-0.1.5",
 >>>>>>> Stashed changes
@@ -614,7 +858,11 @@
     {
       "name": "flutter_launcher_icons",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
 >>>>>>> Stashed changes
@@ -624,7 +872,11 @@
     {
       "name": "flutter_lints",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
 >>>>>>> Stashed changes
@@ -634,7 +886,11 @@
     {
       "name": "flutter_local_notifications",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications-16.3.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications-16.3.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications-16.3.3",
 >>>>>>> Stashed changes
@@ -644,7 +900,11 @@
     {
       "name": "flutter_local_notifications_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_linux-4.0.1",
 >>>>>>> Stashed changes
@@ -654,7 +914,11 @@
     {
       "name": "flutter_local_notifications_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.2.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.2.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_local_notifications_platform_interface-7.2.0",
 >>>>>>> Stashed changes
@@ -664,7 +928,11 @@
     {
       "name": "flutter_native_splash",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_splash-2.4.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_splash-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_native_splash-2.4.1",
 >>>>>>> Stashed changes
@@ -674,7 +942,11 @@
     {
       "name": "flutter_plugin_android_lifecycle",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.28",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.22",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.22",
 >>>>>>> Stashed changes
@@ -684,7 +956,11 @@
     {
       "name": "flutter_secure_storage",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-9.2.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-9.2.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage-9.2.4",
 >>>>>>> Stashed changes
@@ -694,7 +970,11 @@
     {
       "name": "flutter_secure_storage_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.2",
 >>>>>>> Stashed changes
@@ -704,7 +984,11 @@
     {
       "name": "flutter_secure_storage_macos",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_macos-3.1.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_macos-3.1.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_macos-3.1.3",
 >>>>>>> Stashed changes
@@ -714,7 +998,11 @@
     {
       "name": "flutter_secure_storage_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.1.2",
 >>>>>>> Stashed changes
@@ -724,7 +1012,11 @@
     {
       "name": "flutter_secure_storage_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_web-1.2.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_web-1.2.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_web-1.2.1",
 >>>>>>> Stashed changes
@@ -734,7 +1026,11 @@
     {
       "name": "flutter_secure_storage_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2",
 >>>>>>> Stashed changes
@@ -744,7 +1040,11 @@
     {
       "name": "flutter_shaders",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_shaders-0.1.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_shaders-0.1.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_shaders-0.1.3",
 >>>>>>> Stashed changes
@@ -754,7 +1054,11 @@
     {
       "name": "flutter_slidable",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_slidable-3.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_slidable-3.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_slidable-3.1.2",
 >>>>>>> Stashed changes
@@ -764,7 +1068,11 @@
     {
       "name": "flutter_staggered_animations",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_staggered_animations-1.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_staggered_animations-1.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_staggered_animations-1.1.1",
 >>>>>>> Stashed changes
@@ -774,7 +1082,11 @@
     {
       "name": "flutter_staggered_grid_view",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_staggered_grid_view-0.7.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_staggered_grid_view-0.7.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_staggered_grid_view-0.7.0",
 >>>>>>> Stashed changes
@@ -784,7 +1096,11 @@
     {
       "name": "flutter_svg",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.0.17",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.0.17",
 >>>>>>> Stashed changes
@@ -794,7 +1110,11 @@
     {
       "name": "flutter_test",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/flutter/src/flutter/packages/flutter_test",
+=======
+      "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/packages/flutter_test",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/packages/flutter_test",
 >>>>>>> Stashed changes
@@ -804,7 +1124,11 @@
     {
       "name": "flutter_web_plugins",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/flutter/src/flutter/packages/flutter_web_plugins",
+=======
+      "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/packages/flutter_web_plugins",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/packages/flutter_web_plugins",
 >>>>>>> Stashed changes
@@ -814,7 +1138,11 @@
     {
       "name": "frontend_server_client",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-4.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-4.0.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-4.0.0",
 >>>>>>> Stashed changes
@@ -824,7 +1152,11 @@
     {
       "name": "functions_client",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/functions_client-2.4.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/functions_client-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/functions_client-2.4.1",
 >>>>>>> Stashed changes
@@ -834,7 +1166,11 @@
     {
       "name": "geocoding",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding-2.2.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding-2.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding-2.2.2",
 >>>>>>> Stashed changes
@@ -844,7 +1180,11 @@
     {
       "name": "geocoding_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_android-3.3.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_android-3.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_android-3.3.1",
 >>>>>>> Stashed changes
@@ -854,7 +1194,11 @@
     {
       "name": "geocoding_ios",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_ios-2.3.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_ios-2.3.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_ios-2.3.0",
 >>>>>>> Stashed changes
@@ -864,7 +1208,11 @@
     {
       "name": "geocoding_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_platform_interface-3.2.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_platform_interface-3.2.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geocoding_platform_interface-3.2.0",
 >>>>>>> Stashed changes
@@ -874,7 +1222,11 @@
     {
       "name": "geolocator",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator-10.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator-10.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator-10.1.1",
 >>>>>>> Stashed changes
@@ -884,7 +1236,11 @@
     {
       "name": "geolocator_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_android-4.6.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_android-4.6.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_android-4.6.1",
 >>>>>>> Stashed changes
@@ -894,7 +1250,11 @@
     {
       "name": "geolocator_apple",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_apple-2.3.13",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_apple-2.3.9",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_apple-2.3.9",
 >>>>>>> Stashed changes
@@ -904,7 +1264,11 @@
     {
       "name": "geolocator_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_platform_interface-4.2.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_platform_interface-4.2.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_platform_interface-4.2.4",
 >>>>>>> Stashed changes
@@ -914,7 +1278,11 @@
     {
       "name": "geolocator_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_web-2.2.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_web-2.2.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_web-2.2.1",
 >>>>>>> Stashed changes
@@ -924,7 +1292,11 @@
     {
       "name": "geolocator_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_windows-0.2.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_windows-0.2.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/geolocator_windows-0.2.3",
 >>>>>>> Stashed changes
@@ -934,7 +1306,11 @@
     {
       "name": "glob",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/glob-2.1.3",
 >>>>>>> Stashed changes
@@ -944,7 +1320,11 @@
     {
       "name": "google_maps",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps-8.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps-8.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps-8.1.1",
 >>>>>>> Stashed changes
@@ -954,7 +1334,11 @@
     {
       "name": "google_maps_flutter",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter-2.12.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter-2.10.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter-2.10.1",
 >>>>>>> Stashed changes
@@ -964,7 +1348,11 @@
     {
       "name": "google_maps_flutter_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_android-2.16.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_android-2.14.7",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_android-2.14.7",
 >>>>>>> Stashed changes
@@ -974,7 +1362,11 @@
     {
       "name": "google_maps_flutter_ios",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_ios-2.15.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_ios-2.15.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_ios-2.15.1",
 >>>>>>> Stashed changes
@@ -984,7 +1376,11 @@
     {
       "name": "google_maps_flutter_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.11.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.11.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.11.1",
 >>>>>>> Stashed changes
@@ -994,7 +1390,11 @@
     {
       "name": "google_maps_flutter_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_web-0.5.12",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_web-0.5.12",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/google_maps_flutter_web-0.5.12",
 >>>>>>> Stashed changes
@@ -1004,7 +1404,11 @@
     {
       "name": "gotrue",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/gotrue-2.12.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/gotrue-2.11.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/gotrue-2.11.1",
 >>>>>>> Stashed changes
@@ -1014,7 +1418,11 @@
     {
       "name": "graphs",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/graphs-2.3.2",
 >>>>>>> Stashed changes
@@ -1024,7 +1432,11 @@
     {
       "name": "gtk",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/gtk-2.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/gtk-2.1.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/gtk-2.1.0",
 >>>>>>> Stashed changes
@@ -1034,7 +1446,11 @@
     {
       "name": "html",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.5+1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.5+1",
 >>>>>>> Stashed changes
@@ -1044,7 +1460,11 @@
     {
       "name": "http",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.3.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.3.0",
 >>>>>>> Stashed changes
@@ -1054,7 +1474,11 @@
     {
       "name": "http_multi_server",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/http_multi_server-3.2.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/http_multi_server-3.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/http_multi_server-3.2.2",
 >>>>>>> Stashed changes
@@ -1064,7 +1488,11 @@
     {
       "name": "http_parser",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
 >>>>>>> Stashed changes
@@ -1074,7 +1502,11 @@
     {
       "name": "image",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.5.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.5.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.5.4",
 >>>>>>> Stashed changes
@@ -1084,7 +1516,11 @@
     {
       "name": "image_picker",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.1.2",
 >>>>>>> Stashed changes
@@ -1094,7 +1530,11 @@
     {
       "name": "image_picker_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.12+23",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.12+12",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.12+12",
 >>>>>>> Stashed changes
@@ -1104,7 +1544,11 @@
     {
       "name": "image_picker_for_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.6",
 >>>>>>> Stashed changes
@@ -1114,7 +1558,11 @@
     {
       "name": "image_picker_ios",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.12+2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.12+2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.12+2",
 >>>>>>> Stashed changes
@@ -1124,7 +1572,11 @@
     {
       "name": "image_picker_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+2",
 >>>>>>> Stashed changes
@@ -1134,7 +1586,11 @@
     {
       "name": "image_picker_macos",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+2",
 >>>>>>> Stashed changes
@@ -1144,7 +1600,11 @@
     {
       "name": "image_picker_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.10.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.10.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.10.1",
 >>>>>>> Stashed changes
@@ -1154,7 +1614,11 @@
     {
       "name": "image_picker_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
 >>>>>>> Stashed changes
@@ -1164,7 +1628,11 @@
     {
       "name": "intl",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
 >>>>>>> Stashed changes
@@ -1174,7 +1642,11 @@
     {
       "name": "io",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.5",
 >>>>>>> Stashed changes
@@ -1184,7 +1656,11 @@
     {
       "name": "js",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
 >>>>>>> Stashed changes
@@ -1194,7 +1670,11 @@
     {
       "name": "json_annotation",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0",
 >>>>>>> Stashed changes
@@ -1204,7 +1684,11 @@
     {
       "name": "jwt_decode",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/jwt_decode-0.3.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/jwt_decode-0.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/jwt_decode-0.3.1",
 >>>>>>> Stashed changes
@@ -1214,7 +1698,11 @@
     {
       "name": "leak_tracker",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-11.0.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.8",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.8",
 >>>>>>> Stashed changes
@@ -1224,7 +1712,11 @@
     {
       "name": "leak_tracker_flutter_testing",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.10",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9",
 >>>>>>> Stashed changes
@@ -1234,7 +1726,11 @@
     {
       "name": "leak_tracker_testing",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
 >>>>>>> Stashed changes
@@ -1244,7 +1740,11 @@
     {
       "name": "lints",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
 >>>>>>> Stashed changes
@@ -1254,7 +1754,11 @@
     {
       "name": "logger",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/logger-2.5.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/logger-2.5.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/logger-2.5.0",
 >>>>>>> Stashed changes
@@ -1264,7 +1768,11 @@
     {
       "name": "logging",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/logging-1.3.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/logging-1.3.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/logging-1.3.0",
 >>>>>>> Stashed changes
@@ -1274,7 +1782,11 @@
     {
       "name": "matcher",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.17",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.17",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.17",
 >>>>>>> Stashed changes
@@ -1284,7 +1796,11 @@
     {
       "name": "material_color_utilities",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.11.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.11.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.11.1",
 >>>>>>> Stashed changes
@@ -1294,7 +1810,11 @@
     {
       "name": "meta",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.16.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.16.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.16.0",
 >>>>>>> Stashed changes
@@ -1304,7 +1824,11 @@
     {
       "name": "mime",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6",
 >>>>>>> Stashed changes
@@ -1314,7 +1838,11 @@
     {
       "name": "nested",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0",
 >>>>>>> Stashed changes
@@ -1324,7 +1852,11 @@
     {
       "name": "octo_image",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-2.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-2.1.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-2.1.0",
 >>>>>>> Stashed changes
@@ -1334,7 +1866,11 @@
     {
       "name": "package_config",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.2.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.2.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.2.0",
 >>>>>>> Stashed changes
@@ -1344,7 +1880,11 @@
     {
       "name": "path",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.1",
 >>>>>>> Stashed changes
@@ -1354,7 +1894,11 @@
     {
       "name": "path_parsing",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_parsing-1.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_parsing-1.1.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_parsing-1.1.0",
 >>>>>>> Stashed changes
@@ -1364,7 +1908,11 @@
     {
       "name": "path_provider",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.5",
 >>>>>>> Stashed changes
@@ -1374,7 +1922,11 @@
     {
       "name": "path_provider_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.17",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.10",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.10",
 >>>>>>> Stashed changes
@@ -1384,7 +1936,11 @@
     {
       "name": "path_provider_foundation",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.4.1",
 >>>>>>> Stashed changes
@@ -1394,7 +1950,11 @@
     {
       "name": "path_provider_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.1",
 >>>>>>> Stashed changes
@@ -1404,7 +1964,11 @@
     {
       "name": "path_provider_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
 >>>>>>> Stashed changes
@@ -1414,7 +1978,11 @@
     {
       "name": "path_provider_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.3.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.3.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.3.0",
 >>>>>>> Stashed changes
@@ -1424,7 +1992,11 @@
     {
       "name": "pdf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/pdf-3.11.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pdf-3.11.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pdf-3.11.3",
 >>>>>>> Stashed changes
@@ -1434,7 +2006,11 @@
     {
       "name": "pdf_widget_wrapper",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/pdf_widget_wrapper-1.0.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pdf_widget_wrapper-1.0.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pdf_widget_wrapper-1.0.4",
 >>>>>>> Stashed changes
@@ -1444,7 +2020,11 @@
     {
       "name": "permission_handler",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-11.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-11.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-11.3.1",
 >>>>>>> Stashed changes
@@ -1454,7 +2034,11 @@
     {
       "name": "permission_handler_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-12.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-12.0.13",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-12.0.13",
 >>>>>>> Stashed changes
@@ -1464,7 +2048,11 @@
     {
       "name": "permission_handler_apple",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.4.7",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.4.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.4.6",
 >>>>>>> Stashed changes
@@ -1474,7 +2062,11 @@
     {
       "name": "permission_handler_html",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_html-0.1.3+5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_html-0.1.3+5",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_html-0.1.3+5",
 >>>>>>> Stashed changes
@@ -1484,7 +2076,11 @@
     {
       "name": "permission_handler_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-4.3.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-4.2.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-4.2.3",
 >>>>>>> Stashed changes
@@ -1494,7 +2090,11 @@
     {
       "name": "permission_handler_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.2.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.2.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.2.1",
 >>>>>>> Stashed changes
@@ -1504,7 +2104,11 @@
     {
       "name": "petitparser",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.0.2",
 >>>>>>> Stashed changes
@@ -1514,7 +2118,11 @@
     {
       "name": "platform",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.6",
 >>>>>>> Stashed changes
@@ -1524,7 +2132,11 @@
     {
       "name": "plugin_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
 >>>>>>> Stashed changes
@@ -1534,7 +2146,11 @@
     {
       "name": "pool",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/pool-1.5.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pool-1.5.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pool-1.5.1",
 >>>>>>> Stashed changes
@@ -1544,7 +2160,11 @@
     {
       "name": "posix",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/posix-6.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/posix-6.0.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/posix-6.0.1",
 >>>>>>> Stashed changes
@@ -1554,7 +2174,11 @@
     {
       "name": "postgrest",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/postgrest-2.4.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/postgrest-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/postgrest-2.4.1",
 >>>>>>> Stashed changes
@@ -1564,7 +2188,11 @@
     {
       "name": "printing",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/printing-5.14.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/printing-5.14.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/printing-5.14.2",
 >>>>>>> Stashed changes
@@ -1574,7 +2202,11 @@
     {
       "name": "provider",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.4",
 >>>>>>> Stashed changes
@@ -1584,7 +2216,11 @@
     {
       "name": "pub_semver",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/pub_semver-2.2.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pub_semver-2.2.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pub_semver-2.2.0",
 >>>>>>> Stashed changes
@@ -1594,7 +2230,11 @@
     {
       "name": "pubspec_parse",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/pubspec_parse-1.5.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pubspec_parse-1.4.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/pubspec_parse-1.4.0",
 >>>>>>> Stashed changes
@@ -1604,7 +2244,11 @@
     {
       "name": "qr",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/qr-3.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/qr-3.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/qr-3.0.2",
 >>>>>>> Stashed changes
@@ -1614,7 +2258,11 @@
     {
       "name": "realtime_client",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/realtime_client-2.5.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/realtime_client-2.4.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/realtime_client-2.4.2",
 >>>>>>> Stashed changes
@@ -1624,7 +2272,11 @@
     {
       "name": "retry",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/retry-3.1.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/retry-3.1.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/retry-3.1.2",
 >>>>>>> Stashed changes
@@ -1634,7 +2286,11 @@
     {
       "name": "rxdart",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0",
 >>>>>>> Stashed changes
@@ -1644,7 +2300,11 @@
     {
       "name": "sanitize_html",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/sanitize_html-2.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sanitize_html-2.1.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sanitize_html-2.1.0",
 >>>>>>> Stashed changes
@@ -1654,7 +2314,11 @@
     {
       "name": "share_plus",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus-7.2.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus-7.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus-7.2.2",
 >>>>>>> Stashed changes
@@ -1664,7 +2328,11 @@
     {
       "name": "share_plus_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus_platform_interface-3.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus_platform_interface-3.4.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus_platform_interface-3.4.0",
 >>>>>>> Stashed changes
@@ -1674,7 +2342,11 @@
     {
       "name": "shared_preferences",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.5.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.3.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.3.3",
 >>>>>>> Stashed changes
@@ -1684,7 +2356,11 @@
     {
       "name": "shared_preferences_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.4.10",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.3.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.3.2",
 >>>>>>> Stashed changes
@@ -1694,7 +2370,11 @@
     {
       "name": "shared_preferences_foundation",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
 >>>>>>> Stashed changes
@@ -1704,7 +2384,11 @@
     {
       "name": "shared_preferences_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
 >>>>>>> Stashed changes
@@ -1714,7 +2398,11 @@
     {
       "name": "shared_preferences_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
 >>>>>>> Stashed changes
@@ -1724,7 +2412,11 @@
     {
       "name": "shared_preferences_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_web-2.4.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_web-2.4.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_web-2.4.3",
 >>>>>>> Stashed changes
@@ -1734,7 +2426,11 @@
     {
       "name": "shared_preferences_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
 >>>>>>> Stashed changes
@@ -1744,7 +2440,11 @@
     {
       "name": "shelf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shelf-1.4.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shelf-1.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shelf-1.4.1",
 >>>>>>> Stashed changes
@@ -1754,7 +2454,11 @@
     {
       "name": "shelf_web_socket",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_web_socket-3.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_web_socket-2.0.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/shelf_web_socket-2.0.1",
 >>>>>>> Stashed changes
@@ -1764,7 +2468,11 @@
     {
       "name": "sky_engine",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/flutter/src/flutter/bin/cache/pkg/sky_engine",
+=======
+      "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/bin/cache/pkg/sky_engine",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter/bin/cache/pkg/sky_engine",
 >>>>>>> Stashed changes
@@ -1774,7 +2482,11 @@
     {
       "name": "source_span",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.1",
 >>>>>>> Stashed changes
@@ -1784,7 +2496,11 @@
     {
       "name": "sprintf",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/sprintf-7.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sprintf-7.0.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sprintf-7.0.0",
 >>>>>>> Stashed changes
@@ -1794,7 +2510,11 @@
     {
       "name": "sqflite",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.4.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.3+1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.3+1",
 >>>>>>> Stashed changes
@@ -1810,7 +2530,11 @@
     {
       "name": "sqflite_common",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.5",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.4",
 >>>>>>> Stashed changes
@@ -1832,7 +2556,11 @@
     {
       "name": "stack_trace",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.12.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.12.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.12.1",
 >>>>>>> Stashed changes
@@ -1842,7 +2570,11 @@
     {
       "name": "storage_client",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/storage_client-2.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/storage_client-2.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/storage_client-2.3.1",
 >>>>>>> Stashed changes
@@ -1852,7 +2584,11 @@
     {
       "name": "stream_channel",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.4",
 >>>>>>> Stashed changes
@@ -1862,7 +2598,11 @@
     {
       "name": "stream_transform",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/stream_transform-2.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/stream_transform-2.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/stream_transform-2.1.1",
 >>>>>>> Stashed changes
@@ -1872,7 +2612,11 @@
     {
       "name": "string_scanner",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.4.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.4.1",
 >>>>>>> Stashed changes
@@ -1882,7 +2626,11 @@
     {
       "name": "supabase",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/supabase-2.7.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/supabase-2.6.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/supabase-2.6.3",
 >>>>>>> Stashed changes
@@ -1892,7 +2640,11 @@
     {
       "name": "supabase_flutter",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/supabase_flutter-2.9.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/supabase_flutter-2.8.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/supabase_flutter-2.8.4",
 >>>>>>> Stashed changes
@@ -1902,7 +2654,11 @@
     {
       "name": "synchronized",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.3.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.1.0+1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.1.0+1",
 >>>>>>> Stashed changes
@@ -1912,7 +2668,11 @@
     {
       "name": "term_glyph",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.2",
 >>>>>>> Stashed changes
@@ -1922,7 +2682,11 @@
     {
       "name": "test_api",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.6",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.4",
 >>>>>>> Stashed changes
@@ -1932,7 +2696,11 @@
     {
       "name": "timezone",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/timezone-0.9.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/timezone-0.9.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/timezone-0.9.4",
 >>>>>>> Stashed changes
@@ -1942,7 +2710,11 @@
     {
       "name": "timing",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/timing-1.0.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/timing-1.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/timing-1.0.2",
 >>>>>>> Stashed changes
@@ -1952,7 +2724,11 @@
     {
       "name": "typed_data",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.4.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
 >>>>>>> Stashed changes
@@ -1962,7 +2738,11 @@
     {
       "name": "universal_html",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/universal_html-2.2.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/universal_html-2.2.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/universal_html-2.2.4",
 >>>>>>> Stashed changes
@@ -1972,7 +2752,11 @@
     {
       "name": "universal_io",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.2",
 >>>>>>> Stashed changes
@@ -1982,7 +2766,11 @@
     {
       "name": "url_launcher",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher-6.3.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher-6.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher-6.3.1",
 >>>>>>> Stashed changes
@@ -1992,7 +2780,11 @@
     {
       "name": "url_launcher_android",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.3.16",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.3.9",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.3.9",
 >>>>>>> Stashed changes
@@ -2002,7 +2794,11 @@
     {
       "name": "url_launcher_ios",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_ios-6.3.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_ios-6.3.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_ios-6.3.3",
 >>>>>>> Stashed changes
@@ -2012,7 +2808,11 @@
     {
       "name": "url_launcher_linux",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_linux-3.2.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_linux-3.2.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_linux-3.2.1",
 >>>>>>> Stashed changes
@@ -2022,7 +2822,11 @@
     {
       "name": "url_launcher_macos",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_macos-3.2.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_macos-3.2.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_macos-3.2.2",
 >>>>>>> Stashed changes
@@ -2032,7 +2836,11 @@
     {
       "name": "url_launcher_platform_interface",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_platform_interface-2.3.2",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_platform_interface-2.3.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_platform_interface-2.3.2",
 >>>>>>> Stashed changes
@@ -2042,7 +2850,11 @@
     {
       "name": "url_launcher_web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_web-2.4.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_web-2.3.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_web-2.3.3",
 >>>>>>> Stashed changes
@@ -2052,7 +2864,11 @@
     {
       "name": "url_launcher_windows",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_windows-3.1.4",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_windows-3.1.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_windows-3.1.4",
 >>>>>>> Stashed changes
@@ -2062,7 +2878,11 @@
     {
       "name": "uuid",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.5.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.5.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.5.1",
 >>>>>>> Stashed changes
@@ -2072,7 +2892,11 @@
     {
       "name": "vector_graphics",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.18",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.18",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.18",
 >>>>>>> Stashed changes
@@ -2082,7 +2906,11 @@
     {
       "name": "vector_graphics_codec",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_codec-1.1.13",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_codec-1.1.13",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_codec-1.1.13",
 >>>>>>> Stashed changes
@@ -2092,7 +2920,11 @@
     {
       "name": "vector_graphics_compiler",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_compiler-1.1.17",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_compiler-1.1.16",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics_compiler-1.1.16",
 >>>>>>> Stashed changes
@@ -2102,7 +2934,11 @@
     {
       "name": "vector_math",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.2.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
 >>>>>>> Stashed changes
@@ -2112,7 +2948,11 @@
     {
       "name": "vm_service",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-15.0.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.3.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.3.1",
 >>>>>>> Stashed changes
@@ -2122,7 +2962,11 @@
     {
       "name": "watcher",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/watcher-1.1.1",
 >>>>>>> Stashed changes
@@ -2132,7 +2976,11 @@
     {
       "name": "web",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/web-1.1.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/web-1.1.1",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/web-1.1.1",
 >>>>>>> Stashed changes
@@ -2142,7 +2990,11 @@
     {
       "name": "web_socket",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket-1.0.1",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket-0.1.6",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket-0.1.6",
 >>>>>>> Stashed changes
@@ -2152,7 +3004,11 @@
     {
       "name": "web_socket_channel",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket_channel-3.0.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket_channel-3.0.2",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/web_socket_channel-3.0.2",
 >>>>>>> Stashed changes
@@ -2162,7 +3018,11 @@
     {
       "name": "win32",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.13.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.4",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.4",
 >>>>>>> Stashed changes
@@ -2172,7 +3032,11 @@
     {
       "name": "xdg_directories",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.1.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.1.0",
 >>>>>>> Stashed changes
@@ -2182,7 +3046,11 @@
     {
       "name": "xml",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0",
 >>>>>>> Stashed changes
@@ -2192,7 +3060,11 @@
     {
       "name": "yaml",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.3",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.3",
 >>>>>>> Stashed changes
@@ -2202,7 +3074,11 @@
     {
       "name": "yet_another_json_isolate",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "rootUri": "file:///C:/Users/Escritorio/AppData/Local/Pub/Cache/hosted/pub.dev/yet_another_json_isolate-2.1.0",
+=======
+      "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/yet_another_json_isolate-2.0.3",
+>>>>>>> Stashed changes
 =======
       "rootUri": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache/hosted/pub.dev/yet_another_json_isolate-2.0.3",
 >>>>>>> Stashed changes
@@ -2217,6 +3093,7 @@
     }
   ],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "generator": "pub",
   "generatorVersion": "3.9.0",
   "flutterRoot": "file:///C:/flutter/src/flutter",
@@ -2225,9 +3102,16 @@
 =======
   "generated": "2025-09-11T01:53:46.773166Z",
   "generator": "pub",
+=======
+  "generated": "2025-09-11T01:53:46.773166Z",
+  "generator": "pub",
+>>>>>>> Stashed changes
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///C:/flutterSDK/flutter_windows_3.29.3-stable/flutter",
   "flutterVersion": "3.29.3",
   "pubCache": "file:///C:/Users/Bimeiro/AppData/Local/Pub/Cache"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

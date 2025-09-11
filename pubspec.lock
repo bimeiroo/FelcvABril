@@ -965,10 +965,17 @@ packages:
     description:
       name: leak_tracker
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       sha256: "8dcda04c3fc16c14f48a7bb586d4be1f0d1572731b6d81d51772ef47c02081e0"
       url: "https://pub.dev"
     source: hosted
     version: "11.0.1"
+=======
+      sha256: c35baad643ba394b40aac41080300150a4f08fd0fd6a10378f8f7c6bc161acec
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.8"
+>>>>>>> Stashed changes
 =======
       sha256: c35baad643ba394b40aac41080300150a4f08fd0fd6a10378f8f7c6bc161acec
       url: "https://pub.dev"
