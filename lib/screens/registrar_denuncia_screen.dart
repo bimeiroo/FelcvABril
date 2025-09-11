@@ -291,7 +291,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             '${now.day.toString().padLeft(2, '0')}/${now.month.toString().padLeft(2, '0')}/${now.year}';
         final horaActual =
             '${now.hour.toString().padLeft(2, '0')}:${now.minute.toString().padLeft(2, '0')}';
-  
+        List<Usuario> list = session.state.usuarios;
+        Usuario usuarioEncontrado = list.firstWhere(
+          (u) => u.id == _funcionarioAdicional,
+        );
         final denuncia = Denuncia(
           id: widget.denuncia?.id ?? '',
           numeroDenuncia: widget.denuncia?.numeroDenuncia ?? '',
@@ -318,9 +321,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           funcionarioAdicional: _funcionarioAdicional ?? '',
           nombreFuncionarioAsignado:
               session.state.usuarioActual!.nombreCompleto(),
-          nombreFuncionarioAdicional: session
-              .state.usuarios[(int.tryParse(_funcionarioAdicional!) ?? 0) - 1]
-              .nombreCompleto(),
+          nombreFuncionarioAdicional: usuarioEncontrado.nombreCompleto(),
           tipoDenuncia: _tipoDenunciaSeleccionado,
           estado: 'Pendiente',
           fechaRegistro: DateTime.now(),
