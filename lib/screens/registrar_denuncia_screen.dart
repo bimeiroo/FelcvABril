@@ -700,7 +700,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                     ),
                     const SizedBox(height: 16),
                     customTextFormField(
-                      controller: _telefonoFuncionarioController,
+                      controller: _siglaController,
                       labelText: 'Patrulla Sigla',
                       prefixIcon: const Icon(Icons.badge),
                     ),

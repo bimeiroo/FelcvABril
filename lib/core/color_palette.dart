@@ -20,13 +20,14 @@ class ColorPalette {
   });
 
   factory ColorPalette.light() => const ColorPalette(
-        primary: Color.fromARGB(255, 255, 255, 255), // Azul profundo como primario
+        primary: Color.fromARGB(255, 252, 249, 249), // Azul profundo como primario
         secondary: Color(0xFF1976D2), // Azul medio como secundario
         accent: Color(0xFF64B5F6),    // Azul claro como acento
         error: Color(0xFFD32F2F),     // Rojo error
         success: Color(0xFF388E3C),   // Verde éxito
         background: Color(0xFF2A4B3A),// Blanco
-        warning: Color(0xFFFFA000),   //         
+        warning: Color(0xFFFFA000),   //  
+              
       );
 
   factory ColorPalette.dark() => const ColorPalette(
@@ -55,6 +56,7 @@ class AppColors {
    static const Color textColor1 = Color(0xFF989acd);
   static const Color textColor2 = Color(0xFF878593);
   static const Color bigTextColor = Color(0xFF2e2e31);
+  static const backgroundColorlight =   Color(0xFFF5F5F5) ;
 
   static const Color mainColor = Color(0xFF5d69b3);
   static const Color starColor = Color(0xFFe7bb4e);
