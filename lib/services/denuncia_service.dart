@@ -75,8 +75,8 @@ class DenunciaService {
             denuncia.telefonoFuncionarioAdicional,
         'p_carnet_funcionario_adicional': denuncia.carnetFuncionarioAdicional,
         'p_sigla': denuncia.sigla,
-        'p_latitud': denuncia.latitud,
-        'p_logitud': denuncia.longitud,
+        'p_latitud': double.tryParse( denuncia.latitud)??0,
+        'p_logitud': double.tryParse(denuncia.longitud)??0,
       };
 
       final response = await makeRpc('den_insertar_denuncia', params: params);

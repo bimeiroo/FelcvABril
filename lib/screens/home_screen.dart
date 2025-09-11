@@ -1,3 +1,5 @@
+import 'package:felcv/core/app_helpers.dart';
+import 'package:felcv/core/color_palette.dart';
 import 'package:felcv/screens/login_screen.dart';
 import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:felcv/services/supabase_service.dart';
@@ -11,39 +13,52 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = ColorPalette.of(context);
     final session = context.read<SessionCubit>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FELCV'),
-        backgroundColor: Colors.green[800],
-        foregroundColor: Colors.white,
+        backgroundColor: palette.background,
+        foregroundColor: palette.primary,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Colors.green[800]!, Colors.green[600]!],
-          ),
-        ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(24.0),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: widthScreenSize(),
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.security,
-                  size: 100,
-                  color: Colors.white,
-                ),
-                const Text(
-                  'Sistema de Denuncias',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
+                const CircleAvatar(
+                  radius: 60,
+                  backgroundColor: AppColors.backgroundShawow,
+                  child: Icon(
+                    Icons.person_outline,
+                    size: 100,
                     color: Colors.white,
                   ),
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Sistema de Denuncias',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'FELCV',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 32),
                 Text(
@@ -63,10 +78,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 48),
-                SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton.icon(
+                _button(
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -77,77 +89,64 @@ class HomeScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.green[800],
-                      elevation: 4,
-                    ),
-                    icon: const Icon(Icons.add_circle_outline),
-                    label: const Text(
-                      'Registrar Denuncia',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
+                    label: 'Registrar Denuncia'),
                 const SizedBox(height: 16),
-                SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton.icon(
+                _button(
                     onPressed: () {
                       session.obtenerDenuncias().then(
                         (value) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const BuscarDenunciasScreen(),
-                            ),
-                          );
+                          if (context.mounted) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const BuscarDenunciasScreen(),
+                              ),
+                            );
+                          }
                         },
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.green[800],
-                      elevation: 4,
-                    ),
-                    icon: const Icon(Icons.search),
-                    label: const Text(
-                      'Buscar Denuncias',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
+                    label: 'Buscar Denuncias'),
                 const SizedBox(height: 16),
-                SizedBox(
-                  width: double.infinity,
-                  height: 56,
-                  child: ElevatedButton.icon(
+                _button(
                     onPressed: () {
                       supabase.auth.signOut();
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginScreen()),
-                          );
-                     
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()),
+                      );
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.green[800],
-                      elevation: 4,
-                    ),
-                    icon: const Icon(Icons.exit_to_app),
-                    label: const Text(
-                      'Salir',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
-                ),
+                    label: 'Salir'),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _button({required void Function() onPressed, required String label}) {
+    return SizedBox(
+      width: double.infinity,
+      height: 50,
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.backgroundShawow,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+        ),
+        onPressed: onPressed,
+        label: Text(
+          label,
+          style: const TextStyle(color: Colors.white, fontSize: 18),
+        ),
+        icon: const Icon(
+          Icons.arrow_forward,
+          color: Color.fromARGB(255, 33, 243, 40),
         ),
       ),
     );

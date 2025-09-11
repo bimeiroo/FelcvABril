@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:felcv/core/color_palette.dart';
+import 'package:felcv/screens/custom_widgets.dart';
 import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:felcv/services/helpers.dart';
 import 'package:flutter/foundation.dart';
@@ -289,7 +291,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             '${now.day.toString().padLeft(2, '0')}/${now.month.toString().padLeft(2, '0')}/${now.year}';
         final horaActual =
             '${now.hour.toString().padLeft(2, '0')}:${now.minute.toString().padLeft(2, '0')}';
-
+  
         final denuncia = Denuncia(
           id: widget.denuncia?.id ?? '',
           numeroDenuncia: widget.denuncia?.numeroDenuncia ?? '',
@@ -359,6 +361,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
         }
       } catch (e) {
         if (mounted) {
+          print(e);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text('Error: ${e.toString()}'),
@@ -377,6 +380,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
   @override
   Widget build(BuildContext context) {
     final session = context.read<SessionCubit>();
+    final palette = ColorPalette.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Column(
@@ -384,7 +388,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
             Text(widget.modoEdicion ? 'Editar Denuncia' : 'Registrar Denuncia'),
           ],
         ),
-        backgroundColor: Colors.green[800],
+        backgroundColor: palette.background,
         foregroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -394,38 +398,18 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              TextFormField(
+              customTextFormField(
                 controller: _fechaController,
-                decoration: const InputDecoration(
-                  labelText: 'Fecha',
-                  prefixIcon: Icon(Icons.calendar_today),
-                  hintText: 'Fecha generada automáticamente',
-                  filled: true,
-                  fillColor: Color(0xFFEEEEEE),
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Por favor ingrese la fecha';
-                  }
-                  return null;
-                },
+                labelText: 'Fecha',
+                prefixIcon: const Icon(Icons.calendar_today),
+                hintText: 'Fecha generada automáticamente',
               ),
               const SizedBox(height: 16),
-              TextFormField(
+              customTextFormField(
                 controller: _horaController,
-                decoration: const InputDecoration(
-                  labelText: 'Hora',
-                  prefixIcon: Icon(Icons.access_time),
-                  hintText: 'Hora generada automáticamente',
-                  filled: true,
-                  fillColor: Color(0xFFEEEEEE),
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Por favor ingrese la hora';
-                  }
-                  return null;
-                },
+                labelText: 'Hora',
+                prefixIcon: const Icon(Icons.access_time),
+                hintText: 'Hora generada automáticamente',
               ),
               const SizedBox(height: 24),
 
@@ -448,75 +432,34 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _nombreController,
-                      decoration: const InputDecoration(
-                        labelText: 'Nombre del Denunciante o victima',
-                        prefixIcon: Icon(Icons.person),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el nombre';
-                        }
-                        return null;
-                      },
+                      labelText: 'Nombre del Denunciante o victima',
+                      prefixIcon: const Icon(Icons.person),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _apellidoController,
-                      decoration: const InputDecoration(
-                        labelText: 'Apellido del Denunciante o victima',
-                        prefixIcon: Icon(Icons.person_outline),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el apellido';
-                        }
-                        return null;
-                      },
+                      labelText: 'Apellido del Denunciante o victima',
+                      prefixIcon: const Icon(Icons.person_outline),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _ciController,
-                      decoration: const InputDecoration(
-                        labelText: 'CI del Denunciante o victima ',
-                        prefixIcon: Icon(Icons.badge),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el CI';
-                        }
-                        return null;
-                      },
+                      labelText: 'CI del Denunciante o victima ',
+                      prefixIcon: const Icon(Icons.badge),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _telefonoController,
-                      decoration: const InputDecoration(
-                        labelText: 'Teléfono del Denunciante o victima',
-                        prefixIcon: Icon(Icons.phone),
-                      ),
-                      keyboardType: TextInputType.phone,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el teléfono';
-                        }
-                        return null;
-                      },
+                      labelText: 'Teléfono del Denunciante o victima',
+                      prefixIcon: const Icon(Icons.phone),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _profesionController,
-                      decoration: const InputDecoration(
-                        labelText: 'Profesión u Ocupación',
-                        prefixIcon: Icon(Icons.work),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese la profesión u ocupación';
-                        }
-                        return null;
-                      },
+                      labelText: 'Profesión u Ocupación',
+                      prefixIcon: const Icon(Icons.work),
                     ),
                     const SizedBox(height: 16),
                     InkWell(
@@ -548,7 +491,6 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                 ),
               ),
               const SizedBox(height: 24),
-
               // Sección de datos del denunciado
               Container(
                 padding: const EdgeInsets.all(16),
@@ -568,49 +510,33 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _nombreDenunciadoController,
-                      decoration: const InputDecoration(
-                        labelText: 'Nombre del Denunciado',
-                        prefixIcon: Icon(Icons.person),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el nombre del denunciado';
-                        }
-                        return null;
-                      },
+                      labelText: 'Nombre del Denunciado',
+                      prefixIcon: const Icon(Icons.person),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _ciDenunciadoController,
-                      decoration: const InputDecoration(
-                        labelText: 'CI del Denunciado',
-                        prefixIcon: Icon(Icons.badge),
-                      ),
+                      labelText: 'CI del Denunciado',
+                      prefixIcon: const Icon(Icons.badge),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _direccionDenunciadoController,
-                      decoration: const InputDecoration(
-                        labelText: 'Dirección del Denunciado',
-                        prefixIcon: Icon(Icons.location_on),
-                      ),
+                      labelText: 'Dirección del Denunciado',
+                      prefixIcon: const Icon(Icons.location_on),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _profesionDenunciadoController,
-                      decoration: const InputDecoration(
-                        labelText: 'Profesión u Ocupación del Denunciado',
-                        prefixIcon: Icon(Icons.work),
-                      ),
+                      labelText: 'Profesión u Ocupación del Denunciado',
+                      prefixIcon: const Icon(Icons.work),
                     ),
                   ],
                 ),
               ),
-
               const SizedBox(height: 24),
-
               // Sección de detalles de la denuncia
               Container(
                 padding: const EdgeInsets.all(16),
@@ -630,33 +556,16 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _hechosController,
-                      decoration: const InputDecoration(
-                        labelText: 'Breve detalle del hecho:',
-                        prefixIcon: Icon(Icons.description),
-                      ),
-                      maxLines: 3,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese los hechos';
-                        }
-                        return null;
-                      },
+                      labelText: 'Breve detalle del hecho:',
+                      prefixIcon: const Icon(Icons.description),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _lugarController,
-                      decoration: const InputDecoration(
-                        labelText: 'Lugar de los hechos',
-                        prefixIcon: Icon(Icons.place),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el lugar de los hechos';
-                        }
-                        return null;
-                      },
+                      labelText: 'Lugar de los hechos',
+                      prefixIcon: const Icon(Icons.place),
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
@@ -740,18 +649,10 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                       onChanged: null,
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _zonaController,
-                      decoration: const InputDecoration(
-                        labelText: 'Zona',
-                        prefixIcon: Icon(Icons.location_city),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese la zona';
-                        }
-                        return null;
-                      },
+                      labelText: 'Zona',
+                      prefixIcon: const Icon(Icons.location_city),
                     ),
                     const SizedBox(height: 16),
                     DropdownButtonFormField<String>(
@@ -785,47 +686,22 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                     const SizedBox(height: 16),
                     _buildFuncionarioAsignadoSection(session.state.usuarios),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _carnetFuncionarioController,
-                      decoration: const InputDecoration(
-                        labelText: 'Número de Carnet Funcionario*',
-                        prefixIcon: Icon(Icons.badge),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el número de carnet';
-                        }
-                        return null;
-                      },
+                      labelText: 'Número de Carnet Funcionario',
+                      prefixIcon: const Icon(Icons.badge),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
+                    customTextFormField(
                       controller: _telefonoFuncionarioController,
-                      decoration: const InputDecoration(
-                        labelText: 'Teléfono del Funcionario *',
-                        prefixIcon: Icon(Icons.phone),
-                      ),
-                      keyboardType: TextInputType.phone,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese el teléfono';
-                        }
-                        return null;
-                      },
+                      labelText: 'Teléfono del Funcionario',
+                      prefixIcon: const Icon(Icons.badge),
                     ),
                     const SizedBox(height: 16),
-                    TextFormField(
-                      controller: _siglaController,
-                      decoration: const InputDecoration(
-                        labelText: 'Patrulla Sigla *',
-                        prefixIcon: Icon(Icons.local_police),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Por favor ingrese la sigla de la patrulla';
-                        }
-                        return null;
-                      },
+                    customTextFormField(
+                      controller: _telefonoFuncionarioController,
+                      labelText: 'Patrulla Sigla',
+                      prefixIcon: const Icon(Icons.badge),
                     ),
                   ],
                 ),
@@ -840,7 +716,7 @@ class _RegistrarDenunciaScreenState extends State<RegistrarDenunciaScreen> {
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _guardarDenuncia,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green[800],
+                    backgroundColor: AppColors.backgroundShawow,
                     foregroundColor: Colors.white,
                   ),
                   child: _isLoading

@@ -1,3 +1,4 @@
+import 'package:felcv/core/color_palette.dart';
 import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -47,10 +48,11 @@ class _BuscarDenunciasScreenState extends State<BuscarDenunciasScreen> {
   @override
   Widget build(BuildContext context) {
     final session = context.watch<SessionCubit>();
+    final palette = ColorPalette.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Buscar Denuncias'),
-        backgroundColor: Colors.green[800],
+        backgroundColor: palette.background,
         foregroundColor: Colors.white,
       ),
       body: Column(

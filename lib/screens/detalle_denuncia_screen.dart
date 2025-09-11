@@ -1,3 +1,4 @@
+import 'package:felcv/core/color_palette.dart';
 import 'package:felcv/services/helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
@@ -308,10 +309,11 @@ class _DetalleDenunciaScreenState extends State<DetalleDenunciaScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final palette = ColorPalette.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Detalle de Denuncia'),
-        backgroundColor: Colors.green[800],
+        backgroundColor: palette.background,
         foregroundColor: Colors.white,
         actions: [
           Container(

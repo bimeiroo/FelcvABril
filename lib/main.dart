@@ -1,3 +1,4 @@
+import 'package:felcv/core/color_palette.dart';
 import 'package:felcv/services/cubit/session_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,26 +41,16 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'FELCV',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
           useMaterial3: true,
-          // Configuraciones responsivas para texto
-          textTheme: const TextTheme(
-            displayLarge: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-            displayMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-            displaySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-            headlineMedium:
-                TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-            bodyLarge: TextStyle(fontSize: 13),
-            bodyMedium: TextStyle(fontSize: 11),
-            labelLarge: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+          colorScheme: ColorScheme.light(
+            primary: ColorPalette.light().primary,
+            secondary: ColorPalette.light().secondary,
+            error: ColorPalette.light().error,
           ),
-          // Configuraciones responsivas para inputs
-          inputDecorationTheme: const InputDecorationTheme(
-            isDense: true,
-            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
+          scaffoldBackgroundColor: ColorPalette.light().background,
         ),
         builder: (context, child) {
           // Asegurar que el texto se escale correctamente

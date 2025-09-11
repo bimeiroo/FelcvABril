@@ -1,7 +1,12 @@
+import 'package:felcv/core/color_palette.dart';
 import 'package:flutter/material.dart';
 
 class SeleccionarUbicacionScreen extends StatefulWidget {
-  const SeleccionarUbicacionScreen({super.key, required this.direccion, required this.latitud, required this.longitud});
+  const SeleccionarUbicacionScreen(
+      {super.key,
+      required this.direccion,
+      required this.latitud,
+      required this.longitud});
   final String direccion;
   final String latitud;
   final String longitud;
@@ -15,7 +20,6 @@ class _SeleccionarUbicacionScreenState
   final _direccionController = TextEditingController();
   final _latitudController = TextEditingController();
   final _longitudController = TextEditingController();
-
 
   @override
   void initState() {
@@ -52,59 +56,69 @@ class _SeleccionarUbicacionScreenState
 
   @override
   Widget build(BuildContext context) {
+    final palette = ColorPalette.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ingresar Dirección'),
-        backgroundColor: Colors.green[800],
+        backgroundColor: palette.background,
         foregroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextField(
-              controller: _direccionController,
-              decoration: const InputDecoration(
-                labelText: 'Dirección',
-                prefixIcon: Icon(Icons.location_on),
-                hintText: 'Ingrese la dirección completa',
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.grey[100],
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              TextField(
+                controller: _direccionController,
+                decoration: const InputDecoration(
+                  labelText: 'Dirección',
+                  prefixIcon: Icon(Icons.location_on),
+                  hintText: 'Ingrese la dirección completa',
+                ),
+                maxLines: 3,
               ),
-              maxLines: 3,
-            ),
-            const SizedBox(height: 16),
-            TextField(
-              controller: _latitudController,
-              decoration: const InputDecoration(
-                labelText: 'Latitud',
-                prefixIcon: Icon(Icons.location_searching),
-                hintText: 'Ejemplo: -16.4897',
+              const SizedBox(height: 16),
+              TextField(
+                controller: _latitudController,
+                decoration: const InputDecoration(
+                  labelText: 'Latitud',
+                  prefixIcon: Icon(Icons.location_searching),
+                  hintText: 'Ejemplo: -16.4897',
+                ),
+                keyboardType:
+                    const TextInputType.numberWithOptions(decimal: true),
               ),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: true),
-            ),
-            const SizedBox(height: 16),
-            TextField(
-              controller: _longitudController,
-              decoration: const InputDecoration(
-                labelText: 'Longitud',
-                prefixIcon: Icon(Icons.location_searching),
-                hintText: 'Ejemplo: -68.1193',
+              const SizedBox(height: 16),
+              TextField(
+                controller: _longitudController,
+                decoration: const InputDecoration(
+                  labelText: 'Longitud',
+                  prefixIcon: Icon(Icons.location_searching),
+                  hintText: 'Ejemplo: -68.1193',
+                ),
+                keyboardType:
+                    const TextInputType.numberWithOptions(decimal: true),
               ),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: true),
-            ),
-            const SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: _confirmarUbicacion,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green[800],
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16),
+              const SizedBox(height: 24),
+              SizedBox(
+                height: 48,
+                child: ElevatedButton(
+                  onPressed: _confirmarUbicacion,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.backgroundShawow,
+                    foregroundColor: Colors.white,
+                  ),
+                  child: const Text('Confirmar Ubicación'),
+                ),
               ),
-              child: const Text('Confirmar Ubicación'),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
